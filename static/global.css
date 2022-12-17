@@ -1,0 +1,29 @@
+:root {
+    --site-padding: 4rem;
+
+    --color-yellow: #ffeaba;
+    --color-blue: #215aab;
+    --color-black: #222222;
+
+    --background-color: var(--color-yellow);
+    --accent-color: var(--color-blue);
+    --text-color: var(--color-black);
+}
+
+html,
+body {
+    margin: 0;
+}
+
+body {
+    font-family: 'Crimson Text', serif;
+    font-size: 2rem;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    padding-left: var(--site-padding);
+    padding-right: var(--site-padding);
+}
+
+a {
+    color: var(--accent-color);
+}
