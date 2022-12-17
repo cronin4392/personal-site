@@ -1,7 +1,29 @@
+@font-face {
+    font-family: Cloister;
+    src: url("/fonts/cloister/regular.woff");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Cloister;
+    src: url("/fonts/cloister/light.woff");
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Cloister Swash";
+    src: url("/fonts/cloister/swash.woff");
+    font-weight: 400;
+    font-style: normal;
+}
+
 :root {
     --site-padding: 4rem;
 
-    --color-yellow: #ffeaba;
+    --color-yellow: hsl(42, 100%, 86%);
+    --color-yellow-dark: hsl(42, 75%, 80%);
     --color-blue: #215aab;
     --color-black: #222222;
 
@@ -16,7 +38,7 @@ body {
 }
 
 body {
-    font-family: 'Crimson Text', serif;
+    font-family: 'Cloister', serif;
     font-size: 2rem;
     color: var(--text-color);
     background-color: var(--background-color);
@@ -27,4 +49,8 @@ body {
 a {
     color: var(--accent-color);
     text-decoration: none;
+}
+
+.swash {
+    font-family: 'Cloister Swash';
 }

@@ -8,3 +8,9 @@
 {:else}
 	<a {href}><slot /></a>
 {/if}
+
+<style>
+	a {
+		font-family: var(--link-font, inherit);
+	}
+</style>

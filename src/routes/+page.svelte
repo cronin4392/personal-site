@@ -39,6 +39,9 @@
 		<Link {href}>{name}</Link>{#if i < employers.length - 1},{' '}{/if}
 	{/each} ❧
 </section>
+<section>
+	<h2 class="footer-text">Thank You</h2>
+</section>
 
 <style>
 	h1 {
@@ -47,5 +50,22 @@
 		font-weight: 400;
 		margin-top: 1.75em;
 		margin-bottom: 1.75em;
+	}
+
+	.footer-text {
+		--shadow-inset: 1px;
+		--shadow-blur: 4px;
+		font-family: 'Cloister Swash';
+		font-size: 3em;
+		line-height: 1.1;
+		font-weight: 400;
+		color: transparent;
+		text-shadow: var(--shadow-inset) var(--shadow-inset) var(--shadow-blur) var(--background-color),
+			0 0 0 var(--color-yellow-dark),
+			var(--shadow-inset) var(--shadow-inset) var(--shadow-blur) var(--background-color);
+	}
+
+	section {
+		--link-font: 'Cloister Swash';
 	}
 </style>
