@@ -1,3 +1,26 @@
+<script lang="ts">
+	import Link from '$lib/components/Link.svelte';
+
+	const employers = [
+		{
+			name: 'Artists For Humanity',
+			href: 'https://afhboston.org',
+		},
+		{
+			name: 'Reaktor',
+			href: 'https://reaktor.com',
+		},
+		{
+			name: 'The Outline',
+			href: 'https://theoutline.com',
+		},
+		{
+			name: 'Code and Theory',
+			href: 'https://codeandtheory.com',
+		},
+	];
+</script>
+
 <header>
 	<h1>Hi, <br />I’m Stephen Cronin</h1>
 	<p>
@@ -8,10 +31,13 @@
 	</p>
 </header>
 <section>
-	I currently work at <a href="https://tulip.co" target="_blank" rel="noreferrer">Tulip</a> as a
-	software engineer. During the night I am an
-	<a href="https://www.visualsss.net" target="_blank" rel="noreferrer">amatuer VJ artist</a>,
-	creating original realtime graphics for live music acts.
+	I currently work at <Link href="https://tulip.co">Tulip</Link> as a software engineer. During the night
+	I am an
+	<Link href="https://www.visualsss.net">amatuer VJ artist</Link>, creating original realtime
+	graphics for live music acts. I’ve previously worked for
+	{#each employers as { name, href }, i}
+		<Link {href}>{name}</Link>{#if i < employers.length - 1},{' '}{/if}
+	{/each} ❧
 </section>
 
 <style>
