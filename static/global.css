@@ -30,6 +30,7 @@
     --background-color: var(--color-yellow);
     --accent-color: var(--color-blue);
     --text-color: var(--color-black);
+    --link-color: var(--accent-color);
 }
 
 html,
@@ -46,9 +47,26 @@ body {
     padding-right: var(--site-padding);
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 400;
+    line-height: 1.1;
+    margin: 0;
+}
+
 a {
-    color: var(--accent-color);
+    color: var(--link-color);
     text-decoration: none;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+a:hover {
+    opacity: 0.5;
 }
 
 .swash {

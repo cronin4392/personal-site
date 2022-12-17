@@ -1,23 +1,29 @@
 <script lang="ts">
 	import Link from '$lib/components/Link.svelte';
+	import LinkList from '$lib/components/LinkList.svelte';
 
 	const employers = [
 		{
-			name: 'Artists For Humanity',
+			text: 'Artists For Humanity',
 			href: 'https://afhboston.org',
 		},
 		{
-			name: 'Reaktor',
+			text: 'Reaktor',
 			href: 'https://reaktor.com',
 		},
 		{
-			name: 'The Outline',
+			text: 'The Outline',
 			href: 'https://theoutline.com',
 		},
 		{
-			name: 'Code and Theory',
+			text: 'Code and Theory',
 			href: 'https://codeandtheory.com',
 		},
+	];
+
+	const nav = [
+		{ text: 'Knowledge Base', href: '/knowledge-base' },
+		{ text: 'Resume', href: '/resume' },
 	];
 </script>
 
@@ -35,24 +41,23 @@
 	I am an
 	<Link href="https://www.visualsss.net">amatuer VJ artist</Link>, creating original realtime
 	graphics for live music acts. I’ve previously worked for
-	{#each employers as { name, href }, i}
-		<Link {href}>{name}</Link>{#if i < employers.length - 1},{' '}{/if}
-	{/each} ❧
+	<LinkList links={employers} /> ❧
 </section>
-<section>
-	<h2 class="footer-text">Thank You</h2>
-</section>
+<nav>
+	<LinkList links={nav} separator=" • " />
+</nav>
 
+<!-- <section>
+	<h2 class="footer-text">Thank You</h2>
+</section> -->
 <style>
 	h1 {
 		font-size: 3em;
-		line-height: 1.1;
-		font-weight: 400;
 		margin-top: 1.75em;
 		margin-bottom: 1.75em;
 	}
 
-	.footer-text {
+	/* .footer-text {
 		--shadow-inset: 1px;
 		--shadow-blur: 4px;
 		font-family: 'Cloister Swash';
@@ -63,9 +68,18 @@
 		text-shadow: var(--shadow-inset) var(--shadow-inset) var(--shadow-blur) var(--background-color),
 			0 0 0 var(--color-yellow-dark),
 			var(--shadow-inset) var(--shadow-inset) var(--shadow-blur) var(--background-color);
-	}
+	} */
 
 	section {
 		--link-font: 'Cloister Swash';
+	}
+
+	nav {
+		--link-font: 'Cloister Swash';
+		--link-color: var(--text-color);
+		font-size: 2em;
+		line-height: 1.1;
+		margin-top: 1.25em;
+		margin-bottom: 1.25em;
 	}
 </style>
