@@ -2,7 +2,7 @@
 	export let tags: Array<string>;
 </script>
 
-<ul>
+<ul class="font-tags">
 	{#each tags as tag}
 		<li>{tag}</li>
 	{/each}
@@ -13,8 +13,6 @@
 		list-style: none;
 		margin: 0;
 		padding: 0;
-		font-family: sans-serif;
-		font-size: 0.5em;
 	}
 
 	li {
