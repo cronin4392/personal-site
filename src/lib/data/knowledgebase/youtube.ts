@@ -1,6 +1,6 @@
-import type { KnowledgebaseEntry } from './types';
+import type { YoutubeEntry } from './types';
 
-const youtube: Array<KnowledgebaseEntry> = [
+const youtube: Array<YoutubeEntry> = [
 	{
 		type: 'youtube',
 		name: '3Blue1Brown',
@@ -84,18 +84,6 @@ const youtube: Array<KnowledgebaseEntry> = [
 		name: 'Corridor Crew',
 		link: 'https://www.youtube.com/user/samandniko',
 		tags: ['vfx', 'learning', 'technology'],
-	},
-	{
-		type: 'youtube',
-		name: '',
-		link: '',
-		tags: [''],
-	},
-	{
-		type: 'youtube',
-		name: '',
-		link: '',
-		tags: [''],
 	},
 	// {
 	// 	type: 'youtube',

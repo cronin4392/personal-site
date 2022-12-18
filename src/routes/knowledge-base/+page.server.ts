@@ -4,7 +4,7 @@ import knowledgebase from '$lib/data/knowledgebase';
 export const load = (async () => {
 	// Compute tags
 	let tagsDict: { [key: string]: number } = {};
-	knowledgebase.youtube.forEach(({ tags }) => {
+	[...knowledgebase.youtube, ...knowledgebase.books].forEach(({ tags }) => {
 		tags.forEach((tag) => {
 			if (!(tag in tagsDict)) {
 				tagsDict = { ...tagsDict, [tag]: 1 };

@@ -8,25 +8,42 @@
 
 <header>
 	<h1>Knowledge Base</h1>
-	<p>This is a collection of resources that I have collected over the years.</p>
+	<p>
+		This is a repository of resources that I have collected over the years. Some of the topics
+		include science, technology, engineering, psychology, and world affairs with a bit of fun mixed
+		in.
+	</p>
 </header>
 <main class="container">
-	<nav class="tags">
+	<nav class="font-tags">
 		{#each data.tags as { tag, count }}
 			<div>{tag}: {count}</div>
 		{/each}
 	</nav>
-	<section>
-		<h2>Youtube Channels</h2>
-		<ul class="list">
-			{#each data.youtube as { name, link, tags }}
-				<li>
-					<Link href={link}>{name}</Link>
-					<TagList {tags} />
-				</li>
-			{/each}
-		</ul>
-	</section>
+	<div>
+		<section>
+			<h2>Youtube Channels</h2>
+			<ul class="list">
+				{#each data.youtube as { name, link, tags }}
+					<li>
+						<Link href={link}>{name}</Link>
+						<TagList {tags} />
+					</li>
+				{/each}
+			</ul>
+		</section>
+		<section>
+			<h2>Books</h2>
+			<ul class="list">
+				{#each data.books as { name, link, tags }}
+					<li>
+						<Link href={link}>{name}</Link>
+						<TagList {tags} />
+					</li>
+				{/each}
+			</ul>
+		</section>
+	</div>
 </main>
 
 <style lang="scss">
@@ -34,16 +51,15 @@
 		margin-bottom: 4rem;
 	}
 
-	.container {
-		display: grid;
-		grid-template-columns: 12rem 1fr;
-		gap: calc(var(--site-padding) / 2);
-		font-size: 1.5rem;
+	section + section {
+		margin-top: 4rem;
 	}
 
-	.tags {
-		font-family: sans-serif;
-		font-size: 0.8em;
+	.container {
+		display: grid;
+		grid-template-columns: 9rem 1fr;
+		gap: calc(var(--site-padding) / 2);
+		font-size: 1.5rem;
 	}
 
 	.list {
