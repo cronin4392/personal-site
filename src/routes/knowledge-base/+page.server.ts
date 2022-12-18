@@ -2,5 +2,19 @@ import type { PageServerLoad } from './$types';
 import knowledgebase from '$lib/data/knowledgebase';
 
 export const load = (async () => {
-	return knowledgebase;
+	// Compute tags
+	let tagsDict: { [key: string]: number } = {};
+	knowledgebase.youtube.forEach(({ tags }) => {
+		tags.forEach((tag) => {
+			if (!(tag in tagsDict)) {
+				tagsDict = { ...tagsDict, [tag]: 1 };
+			} else {
+				tagsDict = { ...tagsDict, [tag]: tagsDict[tag] + 1 };
+			}
+		});
+	});
+	const tagsList = Object.keys(tagsDict).map((tag) => ({ tag, count: tagsDict[tag] }));
+	tagsList.sort((a, b) => a.tag.localeCompare(b.tag));
+
+	return { ...knowledgebase, tags: tagsList };
 }) satisfies PageServerLoad;

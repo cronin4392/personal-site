@@ -43,6 +43,7 @@ body {
 body {
     font-family: 'Cloister', serif;
     font-size: 2rem;
+    line-height: 1.4;
     color: var(--text-color);
     background-color: var(--background-color);
     padding-left: var(--site-padding);
