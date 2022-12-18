@@ -1,70 +1,71 @@
 /* https://www.fontshop.com/tryout?referer=/families/ltc-cloister */
 
 @font-face {
-    font-family: Cloister;
-    src: url("/fonts/cloister/regular.woff");
-    font-weight: 400;
-    font-style: normal;
+	font-family: Cloister;
+	src: url('/fonts/cloister/regular.woff');
+	font-weight: 400;
+	font-style: normal;
 }
 
 @font-face {
-    font-family: Cloister;
-    src: url("/fonts/cloister/light.woff");
-    font-weight: 200;
-    font-style: normal;
+	font-family: Cloister;
+	src: url('/fonts/cloister/light.woff');
+	font-weight: 200;
+	font-style: normal;
 }
 
 @font-face {
-    font-family: "Cloister Swash";
-    src: url("/fonts/cloister/swash.woff");
-    font-weight: 400;
-    font-style: normal;
+	font-family: 'Cloister Swash';
+	src: url('/fonts/cloister/swash.woff');
+	font-weight: 400;
+	font-style: normal;
 }
 
 /* https://www.fontshop.com/tryout?referer=/families/urw-type-foundry-franklin-gothic */
 
 @font-face {
-    font-family: 'Franklin Gothic';
-    src: url("/fonts/franklin-gothic-condensed/book.woff");
-    font-weight: 400;
-    font-style: normal;
+	font-family: 'Franklin Gothic';
+	src: url('/fonts/franklin-gothic-condensed/book.woff');
+	font-weight: 400;
+	font-style: normal;
 }
 
 @font-face {
-    font-family: 'Franklin Gothic';
-    src: url("/fonts/franklin-gothic-condensed/demi.woff");
-    font-weight: 700;
-    font-style: normal;
+	font-family: 'Franklin Gothic';
+	src: url('/fonts/franklin-gothic-condensed/demi.woff');
+	font-weight: 700;
+	font-style: normal;
 }
 
 :root {
-    --site-padding: 4rem;
+	--site-padding: 4rem;
 
-    --color-yellow: hsl(42, 100%, 86%);
-    --color-yellow-dark: hsl(42, 75%, 80%);
-    --color-blue: #1c60bf;
-    --color-purple: #564377;
-    --color-black: #222222;
+	--color-yellow: hsl(42, 100%, 86%);
+	--color-yellow-dark: hsl(42, 75%, 80%);
+    --color-red: hsl(5, 93%, 58%);
+	--color-blue: #1c60bf;
+	--color-purple: #564377;
+	--color-black: #222222;
 
-    --background-color: var(--color-yellow);
-    --accent-color: var(--color-blue);
-    --text-color: var(--color-black);
-    --link-color: var(--accent-color);
+	--background-color: var(--color-yellow);
+	--text-color: var(--color-black);
+	--link-color: var(--color-blue);
+    --link-active-color: var(--color-red);
 }
 
 html,
 body {
-    margin: 0;
+	margin: 0;
 }
 
 body {
-    font-family: 'Cloister', serif;
-    font-size: 2rem;
-    line-height: 1.4;
-    color: var(--text-color);
-    background-color: var(--background-color);
-    padding-left: var(--site-padding);
-    padding-right: var(--site-padding);
+	font-family: 'Cloister', serif;
+	font-size: 2rem;
+	line-height: 1.4;
+	color: var(--text-color);
+	background-color: var(--background-color);
+	padding-left: var(--site-padding);
+	padding-right: var(--site-padding);
 }
 
 h1,
@@ -73,33 +74,46 @@ h3,
 h4,
 h5,
 h6 {
-    font-weight: 400;
-    line-height: 1.1;
-    margin: 0;
+	font-weight: 400;
+	line-height: 1.1;
+	margin: 0;
 }
 
-a {
-    color: var(--link-color);
-    text-decoration: none;
-    opacity: 1;
-    transition: opacity 0.3s ease-in-out;
+ul,
+ol {
+	list-style: none;
+	padding: 0;
+	margin: 0;
 }
 
-a:visited {
-    color: var(--color-purple);
+.show-visited a:visited {
+	color: var(--color-purple);
 }
 
 a:hover {
-    opacity: 0.5;
+	opacity: 0.5;
 }
 
 .swash {
-    font-family: 'Cloister Swash';
+	font-family: 'Cloister Swash';
 }
 
 .font-tags {
-    font-family: 'Franklin Gothic', sans-serif;
+	font-family: 'Franklin Gothic', sans-serif;
 	font-size: 1rem;
-    text-transform: uppercase;
-    letter-spacing: 0.01em;
+	text-transform: uppercase;
+	letter-spacing: 0.01em;
 }
+
+/* .swash-text {
+	--shadow-inset: 1px;
+	--shadow-blur: 4px;
+	font-family: 'Cloister Swash';
+	font-size: 3em;
+	line-height: 1.1;
+	font-weight: 400;
+	color: transparent;
+	text-shadow: var(--shadow-inset) var(--shadow-inset) var(--shadow-blur) var(--background-color),
+		0 0 0 var(--color-yellow-dark),
+		var(--shadow-inset) var(--shadow-inset) var(--shadow-blur) var(--background-color);
+} */

@@ -1,11 +1,11 @@
 <!-- Look into https://github.com/robinscholz/svelte-inline-svg-->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1 0.25" preserveAspectRatio="xMidYMid slice"
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1 0.125" preserveAspectRatio="xMidYMid slice"
 	><defs
 		><pattern
 			viewBox="0 0 14 14"
 			patternTransform="rotate(45)"
 			width="12%"
-			height="48%"
+			height="96%"
 			id="pattern-15"
 			><path
 				fill="none"
