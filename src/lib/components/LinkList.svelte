@@ -6,5 +6,6 @@
 </script>
 
 {#each links as { text, href }, i}
-	<Link {href}>{text}</Link>{#if i < links.length - 1}{separator}{/if}
+	{@const isLast = i == links.length - 1}
+	{#if isLast} and {/if}<Link {href}>{text}</Link>{#if !isLast}{separator}{/if}
 {/each}
