@@ -2,7 +2,6 @@
 	import Link from '$lib/components/Link.svelte';
 	import { page } from '$app/stores';
 
-	console.log($page);
 	let links = [
 		{ text: '❧', href: '/' },
 		{ text: 'Knowledge Base', href: '/knowledge-base' },
