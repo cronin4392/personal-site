@@ -54,14 +54,14 @@
 }
 
 :root {
-	--site-padding: 4rem;
+	--site-padding: 1rem;
 
 	--font-sans: 'Franklin Gothic', sans-serif;
 	--font-serif: 'Cloister', serif;
 
 	--color-yellow: hsl(42, 100%, 86%);
 	--color-yellow-dark: hsl(42, 75%, 80%);
-    --color-red: hsl(5, 93%, 58%);
+    --color-red: hsl(13, 78%, 53%);
 	--color-blue: #1c60bf;
 	--color-purple: #564377;
 	--color-black: #222222;
@@ -70,6 +70,14 @@
 	--text-color: var(--color-black);
 	--link-color: var(--color-blue);
     --link-active-color: var(--color-red);
+	font-size: 10px;
+}
+
+@media screen and (min-width: 720px) {
+	:root {
+		--site-padding: 4rem;
+		font-size: 16px;
+	}
 }
 
 html,

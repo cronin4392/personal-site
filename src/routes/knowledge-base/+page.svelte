@@ -14,7 +14,7 @@
 		engineering, psychology, and world affairs with a bit of fun mixed in.
 	</p>
 </header>
-<main class="container">
+<main class="container show-visited">
 	<nav class="font-tags">
 		{#each data.tags as { tag, count }}
 			<div>{tag}: {count}</div>
@@ -66,23 +66,39 @@
 		margin-bottom: 1rem;
 	}
 
-	section + section {
-		margin-top: 4rem;
+	nav {
+		display: none;
+
+		@media screen and (min-width: 720px) {
+			display: block;
+		}
 	}
 
 	.container {
 		display: grid;
-		grid-template-columns: 9rem 1fr;
-		gap: calc(var(--site-padding) / 2);
-		font-size: 1.5rem;
+		font-size: 2rem;
+
+		@media screen and (min-width: 720px) {
+			grid-template-columns: 9rem 1fr;
+			gap: calc(var(--site-padding) / 2);
+			font-size: 1.5rem;
+		}
+	}
+
+	section + section {
+		margin-top: 4rem;
 	}
 
 	.list {
 		list-style: none;
 		padding: 0;
 		display: grid;
-		grid-template-columns: repeat(3, 1fr);
+		grid-template-columns: repeat(2, 1fr);
 		column-gap: 1rem;
 		row-gap: 1.5rem;
+
+		@media screen and (min-width: 720px) {
+			grid-template-columns: repeat(3, 1fr);
+		}
 	}
 </style>
