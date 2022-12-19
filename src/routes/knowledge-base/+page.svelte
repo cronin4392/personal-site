@@ -7,11 +7,11 @@
 </script>
 
 <header>
-	<h1>Knowledge Base</h1>
+	<h1 class="swash">Knowledge Base</h1>
 	<p>
-		This is a repository of resources that I have collected over the years. Some of the topics
-		include science, technology, engineering, psychology, and world affairs with a bit of fun mixed
-		in.
+		This is a repository of resources that I have collected over the years. There's everything from
+		links, playlists, places, and books. Some of the topics include science, technology,
+		engineering, psychology, and world affairs with a bit of fun mixed in.
 	</p>
 </header>
 <main class="container">
@@ -49,6 +49,21 @@
 <style lang="scss">
 	header {
 		margin-bottom: 4rem;
+	}
+
+	h1 {
+		font-size: 2.6rem;
+		font-family: var(--font-sans);
+		font-stretch: expanded;
+		font-weight: 400;
+	}
+
+	h2 {
+		font-size: 1.6rem;
+		font-family: var(--font-sans);
+		font-stretch: expanded;
+		font-weight: 300;
+		margin-bottom: 1rem;
 	}
 
 	section + section {

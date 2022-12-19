@@ -37,8 +37,27 @@
 	font-style: normal;
 }
 
+@font-face {
+	font-family: 'Franklin Gothic';
+	src: url('/fonts/franklin-gothic/medium.woff');
+	font-weight: 400;
+	font-style: normal;
+	font-stretch: expanded;
+}
+
+@font-face {
+	font-family: 'Franklin Gothic';
+	src: url('/fonts/franklin-gothic/book.woff');
+	font-weight: 300;
+	font-style: normal;
+	font-stretch: expanded;
+}
+
 :root {
 	--site-padding: 4rem;
+
+	--font-sans: 'Franklin Gothic', sans-serif;
+	--font-serif: 'Cloister', serif;
 
 	--color-yellow: hsl(42, 100%, 86%);
 	--color-yellow-dark: hsl(42, 75%, 80%);
@@ -77,6 +96,10 @@ h6 {
 	font-weight: 400;
 	line-height: 1.1;
 	margin: 0;
+}
+
+p {
+    max-width: 72ch;
 }
 
 ul,
