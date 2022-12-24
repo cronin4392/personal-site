@@ -77,6 +77,7 @@
 	.container {
 		display: grid;
 		font-size: 2rem;
+		align-items: flex-start;
 
 		@media screen and (min-width: 720px) {
 			grid-template-columns: 9rem 1fr;

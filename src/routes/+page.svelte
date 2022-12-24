@@ -51,6 +51,10 @@
 </main>
 
 <style lang="scss">
+	header {
+		padding-top: 1px; // keep margin inside
+	}
+
 	h1 {
 		font-size: 2.2em;
 		margin-top: 3em;
