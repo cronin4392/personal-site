@@ -40,7 +40,6 @@
 		left: calc(var(--offset-x) + var(--left));
 		width: 0px;
 		height: 0px;
-		outline: 5px solid red;
 		transform: scale(var(--scale)) rotateZ(var(--rot));
 		width: 16vw;
 
