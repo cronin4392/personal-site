@@ -11,14 +11,14 @@
 	const range = (x1: number, y1: number, x2: number, y2: number, a: number) =>
 		lerp(x2, y2, invlerp(x1, y1, a));
 
-	const randomSeed = () => randomIntFromInterval(-100, 100);
+	const randomSeed = () => randomIntFromInterval(-200, 1000);
 
 	let y = Math.abs(noise2D(randomSeed(), randomSeed()));
-	let top = y * 300;
-	let left = noise2D(randomSeed(), randomSeed()) * 100;
-	let delay = y * 10;
-	const scale = range(-1, 1, 0.3, 0.6, noise2D(randomSeed(), randomSeed()) * 10);
-	const rot = noise2D(randomSeed(), randomSeed()) * 35;
+	let top = y * 200;
+	let left = range(-1, 1, -25, 125, noise2D(randomSeed(), randomSeed()));
+	let delay = y * 1.5;
+	const scale = range(-1, 1, 0.05, 0.6, noise2D(randomSeed(), randomSeed()));
+	const rot = noise2D(randomSeed(), randomSeed()) * 45;
 </script>
 
 <div
