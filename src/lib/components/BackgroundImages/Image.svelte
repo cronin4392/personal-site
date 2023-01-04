@@ -14,15 +14,11 @@
 	const randomSeed = () => randomIntFromInterval(-100, 100);
 
 	let y = Math.abs(noise2D(randomSeed(), randomSeed()));
-	// let top = y * 750;
 	let top = y * 300;
 	let left = noise2D(randomSeed(), randomSeed()) * 100;
 	let delay = y * 10;
-	delay = 0;
 	const scale = range(-1, 1, 0.3, 0.6, noise2D(randomSeed(), randomSeed()) * 10);
 	const rot = noise2D(randomSeed(), randomSeed()) * 35;
-	// console.log(scale);
-	// console.log(top);
 </script>
 
 <div
@@ -34,7 +30,7 @@
 
 <style lang="scss">
 	.image {
-		--offset-x: var(--right-side, 97vw);
+		// --offset-x: var(--right-side, 97vw);
 		position: absolute;
 		top: var(--top);
 		// left: calc(var(--offset-x) + var(--left));
@@ -58,6 +54,6 @@
 	}
 
 	.image:nth-child(even) {
-		--right-side: 0vw;
+		// --right-side: 0vw;
 	}
 </style>
