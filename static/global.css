@@ -145,8 +145,6 @@ a:hover {
 }
 
 :is(h1, h2, h3, h4, p, main a, main li, main nav) {
-	--blur-small: 20px;
-	--blur-large: 27px;
 	position: relative;
 	background-color: var(--background-color);
 }
