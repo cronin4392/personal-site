@@ -146,12 +146,22 @@ a:hover {
 	letter-spacing: 0.01em;
 }
 
-:is(h1, h2, h3, h4, p, main li, nav):not(li li) {
+.blur-bg {
 	position: relative;
+	display: inline-block;
 	background-color: var(--color-yellow-faded);
 }
 
-:is(h1, h2, h3, h4, p, main li, nav):not(li li):before {
+.blur-bg--fill {
+	position: absolute;
+	inset: 0;
+}
+
+.blur-bg:is(span) {
+	display: inline;
+}
+
+.blur-bg:before {
 	--outset: 80px;
 	content: '';
 	position: absolute;
@@ -163,6 +173,7 @@ a:hover {
 	border-image-width: var(--outset);
 	border-image-repeat: stretch;
 	opacity: var(--background-fade);
+	pointer-events: none;
 }
 
 /* .swash-text {

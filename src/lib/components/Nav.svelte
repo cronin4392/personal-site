@@ -27,7 +27,6 @@
 		top: 0;
 		left: 0;
 		right: 0;
-		background-color: var(--color-yellow-faded);
 		padding: 0.25rem var(--site-padding);
 		z-index: 10;
 
