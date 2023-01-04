@@ -7,25 +7,25 @@
 </script>
 
 <header>
-	<h1 class="swash">Knowledge Base</h1>
-	<p>
+	<h1 class="blur-bg">Knowledge Base</h1>
+	<p class="blur-bg">
 		This is a repository of resources that I have collected over the years. There's everything from
 		links, playlists, places, and books. Some of the topics include science, technology,
 		engineering, psychology, and world affairs with a bit of fun mixed in.
 	</p>
 </header>
 <main class="container show-visited">
-	<nav class="font-tags">
+	<nav class="font-tags blur-bg">
 		{#each data.tags as { tag, count }}
 			<div>{tag}: {count}</div>
 		{/each}
 	</nav>
 	<div>
 		<section>
-			<h2>Youtube Channels</h2>
+			<h2 class="blur-bg">Youtube Channels</h2>
 			<ul class="list">
 				{#each data.youtube as { name, link, tags }}
-					<li>
+					<li class="blur-bg">
 						<Link href={link}>{name}</Link>
 						<TagList {tags} />
 					</li>
@@ -33,10 +33,10 @@
 			</ul>
 		</section>
 		<section>
-			<h2>Books</h2>
+			<h2 class="blur-bg">Books</h2>
 			<ul class="list">
 				{#each data.books as { name, link, tags }}
-					<li>
+					<li class="blur-bg">
 						<Link href={link}>{name}</Link>
 						<TagList {tags} />
 					</li>
@@ -56,6 +56,7 @@
 		font-family: var(--font-sans);
 		font-stretch: expanded;
 		font-weight: 400;
+		margin-top: 2rem;
 	}
 
 	h2 {
@@ -77,6 +78,7 @@
 	.container {
 		display: grid;
 		font-size: 2rem;
+		align-items: flex-start;
 
 		@media screen and (min-width: 720px) {
 			grid-template-columns: 9rem 1fr;

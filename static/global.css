@@ -59,14 +59,16 @@
 	--font-sans: 'Franklin Gothic', sans-serif;
 	--font-serif: 'Cloister', serif;
 
-	--color-yellow: hsl(42, 100%, 86%);
+	--background-fade: 0.95;
+
+	--color-yellow: rgb(255, 234, 184);
+	--color-yellow-faded: rgb(255, 234, 184, var(--background-fade));
 	--color-yellow-dark: hsl(42, 75%, 80%);
     --color-red: hsl(13, 78%, 53%);
 	--color-blue: #1c60bf;
 	--color-purple: #564377;
 	--color-black: #222222;
 
-	--background-color: var(--color-yellow);
 	--text-color: var(--color-black);
 	--link-color: var(--color-blue);
     --link-active-color: var(--color-red);
@@ -83,6 +85,11 @@
 html,
 body {
 	margin: 0;
+	height: auto;
+}
+
+html {
+	overflow: auto;
 }
 
 body {
@@ -90,9 +97,12 @@ body {
 	font-size: 2rem;
 	line-height: 1.4;
 	color: var(--text-color);
-	background-color: var(--background-color);
+	background-color: var(--color-yellow);
 	padding-left: var(--site-padding);
 	padding-right: var(--site-padding);
+	position: relative;
+	min-height: 100vh;
+	overflow: hidden;
 }
 
 h1,
@@ -136,6 +146,32 @@ a:hover {
 	letter-spacing: 0.01em;
 }
 
+.blur-bg {
+	position: relative;
+	display: inline-block;
+	background-color: var(--color-yellow-faded);
+}
+
+.blur-bg--fill {
+	position: absolute;
+	inset: 0;
+}
+
+.blur-bg:before {
+	--outset: 80px;
+	content: '';
+	position: absolute;
+	z-index: -1;
+	inset: calc(-1 * var(--outset));
+	border: var(--outset) solid transparent;
+	border-image-source: url('/images/Gradient-Test.png');
+	border-image-slice: 400;
+	border-image-width: var(--outset);
+	border-image-repeat: stretch;
+	opacity: var(--background-fade);
+	pointer-events: none;
+}
+
 /* .swash-text {
 	--shadow-inset: 1px;
 	--shadow-blur: 4px;
@@ -144,7 +180,7 @@ a:hover {
 	line-height: 1.1;
 	font-weight: 400;
 	color: transparent;
-	text-shadow: var(--shadow-inset) var(--shadow-inset) var(--shadow-blur) var(--background-color),
+	text-shadow: var(--shadow-inset) var(--shadow-inset) var(--shadow-blur) var(--color-yellow),
 		0 0 0 var(--color-yellow-dark),
-		var(--shadow-inset) var(--shadow-inset) var(--shadow-blur) var(--background-color);
+		var(--shadow-inset) var(--shadow-inset) var(--shadow-blur) var(--color-yellow);
 } */

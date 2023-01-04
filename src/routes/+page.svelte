@@ -31,8 +31,8 @@
 
 <main class="show-visited">
 	<header>
-		<h1>Hi, <br />I’m Stephen Cronin</h1>
-		<p>
+		<h1><span class="blur-bg">Hi, <br />I’m Stephen Cronin</span></h1>
+		<p class="blur-bg">
 			I am a software developer with an eye for design. Throughout my career I have worked across a
 			wide variety of industries and team compositions. I have extensive experience in web
 			development with a focus on the front-end. I pride myself in my ability to work well in a team
@@ -40,7 +40,7 @@
 		</p>
 	</header>
 	<section>
-		<p>
+		<p class="blur-bg">
 			I currently work at <Link href="https://tulip.co">Tulip</Link> as a software engineer. During the
 			night I am an
 			<Link href="https://www.visualsss.net">amatuer VJ artist</Link>, creating original realtime
@@ -51,15 +51,19 @@
 </main>
 
 <style lang="scss">
+	header {
+		padding-top: 1px; // keep margin inside
+	}
+
 	h1 {
 		font-size: 2.2em;
 		margin-top: 3em;
-		margin-bottom: 2.5em;
+		margin-bottom: 1.5em;
 
 		@media screen and (min-width: 720px) {
 			font-size: 3em;
 			margin-top: 1.75em;
-			margin-bottom: 1.25em;
+			margin-bottom: 0.75em;
 		}
 	}
 

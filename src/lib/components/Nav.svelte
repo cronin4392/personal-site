@@ -24,11 +24,12 @@
 		font-family: 'Cloister Swash';
 		font-size: 2.5rem;
 		position: fixed;
-		bottom: 0;
+		top: 0;
 		left: 0;
 		right: 0;
-		background-color: var(--background-color);
 		padding: 0.25rem var(--site-padding);
+		background-color: var(--color-yellow-faded);
+		z-index: 10;
 
 		li {
 			display: inline-block;
