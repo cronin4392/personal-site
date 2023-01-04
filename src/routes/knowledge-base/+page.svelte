@@ -7,7 +7,7 @@
 </script>
 
 <header>
-	<h1 class="swash">Knowledge Base</h1>
+	<h1>Knowledge Base</h1>
 	<p>
 		This is a repository of resources that I have collected over the years. There's everything from
 		links, playlists, places, and books. Some of the topics include science, technology,
@@ -56,6 +56,7 @@
 		font-family: var(--font-sans);
 		font-stretch: expanded;
 		font-weight: 400;
+		margin-top: 2rem;
 	}
 
 	h2 {

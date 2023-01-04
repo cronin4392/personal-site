@@ -4,19 +4,19 @@
 
 <div class="container">
 	<Image>
-		<img src="./images/1.png?w=600&webp" alt="Flower" />
+		<img src="./images/1.png?w=800&webp" alt="Flower" />
 	</Image>
 	<Image>
-		<img src="./images/2.png?w=600&webp" alt="Flower" />
+		<img src="./images/2.png?w=800&webp" alt="Flower" />
 	</Image>
 	<Image>
-		<img src="./images/3.png?w=600&webp" alt="Flower" />
+		<img src="./images/3.png?w=800&webp" alt="Flower" />
 	</Image>
 	<Image>
-		<img src="./images/4.png?w=600&webp" alt="Flower" />
+		<img src="./images/4.png?w=800&webp" alt="Flower" />
 	</Image>
 	<Image>
-		<img src="./images/5.png?w=600&webp" alt="Flower" />
+		<img src="./images/5.png?w=800&webp" alt="Flower" />
 	</Image>
 </div>
 
