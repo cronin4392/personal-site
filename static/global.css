@@ -157,10 +157,6 @@ a:hover {
 	inset: 0;
 }
 
-.blur-bg:is(span) {
-	display: inline;
-}
-
 .blur-bg:before {
 	--outset: 80px;
 	content: '';
