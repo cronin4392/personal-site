@@ -59,14 +59,16 @@
 	--font-sans: 'Franklin Gothic', sans-serif;
 	--font-serif: 'Cloister', serif;
 
+	--background-fade: 0.95;
+
 	--color-yellow: rgb(255, 234, 184);
+	--color-yellow-faded: rgb(255, 234, 184, var(--background-fade));
 	--color-yellow-dark: hsl(42, 75%, 80%);
     --color-red: hsl(13, 78%, 53%);
 	--color-blue: #1c60bf;
 	--color-purple: #564377;
 	--color-black: #222222;
 
-	--background-color: var(--color-yellow);
 	--text-color: var(--color-black);
 	--link-color: var(--color-blue);
     --link-active-color: var(--color-red);
@@ -95,7 +97,7 @@ body {
 	font-size: 2rem;
 	line-height: 1.4;
 	color: var(--text-color);
-	background-color: var(--background-color);
+	background-color: var(--color-yellow);
 	padding-left: var(--site-padding);
 	padding-right: var(--site-padding);
 	position: relative;
@@ -146,22 +148,21 @@ a:hover {
 
 :is(h1, h2, h3, h4, p, main li, nav):not(li li) {
 	position: relative;
-	background-color: var(--background-color);
-	background-color: rgba(255, 234, 184, 0.95);
+	background-color: var(--color-yellow-faded);
 }
 
 :is(h1, h2, h3, h4, p, main li, nav):not(li li):before {
-	--outset: 60px;
+	--outset: 80px;
 	content: '';
 	position: absolute;
 	z-index: -1;
 	inset: calc(-1 * var(--outset));
 	border: var(--outset) solid transparent;
-	border-image: url('/images/Gradient-Test.png') 30 / 1 / 0 stretch;
 	border-image-source: url('/images/Gradient-Test.png');
 	border-image-slice: 400;
 	border-image-width: var(--outset);
-	opacity: 0.95;
+	border-image-repeat: stretch;
+	opacity: var(--background-fade);
 }
 
 /* .swash-text {
@@ -172,7 +173,7 @@ a:hover {
 	line-height: 1.1;
 	font-weight: 400;
 	color: transparent;
-	text-shadow: var(--shadow-inset) var(--shadow-inset) var(--shadow-blur) var(--background-color),
+	text-shadow: var(--shadow-inset) var(--shadow-inset) var(--shadow-blur) var(--color-yellow),
 		0 0 0 var(--color-yellow-dark),
-		var(--shadow-inset) var(--shadow-inset) var(--shadow-blur) var(--background-color);
+		var(--shadow-inset) var(--shadow-inset) var(--shadow-blur) var(--color-yellow);
 } */

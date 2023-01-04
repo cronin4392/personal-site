@@ -27,7 +27,7 @@
 		top: 0;
 		left: 0;
 		right: 0;
-		background-color: rgba(255, 234, 184, 0.95);
+		background-color: var(--color-yellow-faded);
 		padding: 0.25rem var(--site-padding);
 		z-index: 10;
 
