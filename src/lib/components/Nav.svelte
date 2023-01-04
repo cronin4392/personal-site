@@ -28,6 +28,7 @@
 		left: 0;
 		right: 0;
 		padding: 0.25rem var(--site-padding);
+		background-color: var(--color-yellow-faded);
 		z-index: 10;
 
 		li {
