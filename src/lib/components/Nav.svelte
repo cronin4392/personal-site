@@ -4,6 +4,7 @@
 
 	let links = [
 		{ text: '❧', href: '/' },
+		{ text: 'Experience', href: '/experience' },
 		{ text: 'Knowledge Base', href: '/knowledge-base' },
 	];
 </script>
