@@ -59,10 +59,7 @@
 	--font-sans: 'Franklin Gothic', sans-serif;
 	--font-serif: 'Cloister', serif;
 
-	--background-fade: 0.95;
-
 	--color-yellow: rgb(255, 234, 184);
-	--color-yellow-faded: rgb(255, 234, 184, var(--background-fade));
 	--color-yellow-dark: hsl(42, 75%, 80%);
     --color-red: hsl(13, 78%, 53%);
 	--color-blue: #1c60bf;
@@ -148,27 +145,14 @@ a:hover {
 
 .blur-bg {
 	position: relative;
-	display: inline-block;
-	background-color: var(--color-yellow-faded);
-}
-
-.blur-bg--fill {
-	position: absolute;
-	inset: 0;
 }
 
 .blur-bg:before {
-	--outset: 80px;
 	content: '';
 	position: absolute;
 	z-index: -1;
-	inset: calc(-1 * var(--outset));
-	border: var(--outset) solid transparent;
-	border-image-source: url('/images/Gradient-Test.png');
-	border-image-slice: 400;
-	border-image-width: var(--outset);
-	border-image-repeat: stretch;
-	opacity: var(--background-fade);
+	inset: -1rem -2rem;
+	background-color: var(--color-yellow);
 	pointer-events: none;
 }
 
