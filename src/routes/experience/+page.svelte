@@ -61,8 +61,6 @@
 	}
 
 	.list {
-		list-style: none;
-		padding: 0;
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		column-gap: 1rem;
