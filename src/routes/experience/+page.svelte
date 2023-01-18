@@ -1,13 +1,12 @@
 <script lang="ts">
 	import type { PageData } from './$types';
-	import H1 from '$lib/components/atoms/typography/H1.svelte';
-	import H2 from '$lib/components/atoms/typography/H2.svelte';
+	import Typography from '$lib/components/Typography';
 	import JobItem from '$lib/components/JobItem.svelte';
 	export let data: PageData;
 </script>
 
 <header class="blur-bg">
-	<H1>Experience</H1>
+	<Typography.H1>Experience</Typography.H1>
 	<p>
 		I am a senior web developer with an eye for design. Throughout my career I have worked across a
 		wide variety of industries and team compositions. While I do have extensive knowledge in
@@ -29,7 +28,7 @@
 		</div>
 	</div>
 	<section>
-		<H2>Career</H2>
+		<Typography.H2>Career</Typography.H2>
 		<ol class="list">
 			{#each data.jobs as item}
 				<JobItem {...item} />
@@ -37,7 +36,7 @@
 		</ol>
 	</section>
 	<section>
-		<H2>Freelance</H2>
+		<Typography.H2>Freelance</Typography.H2>
 		<ol class="list">
 			{#each data.freelance as item}
 				<JobItem {...item} />

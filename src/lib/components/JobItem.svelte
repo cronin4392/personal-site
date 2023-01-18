@@ -1,5 +1,5 @@
 <script lang="ts">
-	import H3 from '$lib/components/atoms/typography/H3.svelte';
+	import Typography from '$lib/components/Typography';
 	import Paragraphs from '$lib/components/Paragraphs.svelte';
 	import Date from '$lib/components/Date.svelte';
 	import MaybeLink from '$lib/components/MaybeLink.svelte';
@@ -12,11 +12,11 @@
 </script>
 
 <li>
-	<H3>
+	<Typography.H3>
 		<MaybeLink href={link}>
 			{name}
 		</MaybeLink>
-	</H3>
+	</Typography.H3>
 	{#if title}<p>{title}</p>{/if}
 	<div>
 		<Date {...date} />

@@ -1,8 +1,6 @@
 <script lang="ts">
 	import type { PageData } from './$types';
-	import H1 from '$lib/components/atoms/typography/H1.svelte';
-	import H2 from '$lib/components/atoms/typography/H2.svelte';
-	import H3 from '$lib/components/atoms/typography/H3.svelte';
+	import Typography from '$lib/components/Typography';
 	import Link from '$lib/components/Link.svelte';
 	import TagList from '$lib/components/TagList.svelte';
 
@@ -10,7 +8,7 @@
 </script>
 
 <header>
-	<H1 class="blur-bg">Knowledge Base</H1>
+	<Typography.H1 class="blur-bg">Knowledge Base</Typography.H1>
 	<p class="blur-bg">
 		This is a repository of resources that I have collected over the years. There's everything from
 		links, playlists, places, and books. Some of the topics include science, technology,
@@ -25,22 +23,22 @@
 	</nav>
 	<div>
 		<section>
-			<H2 class="blur-bg">Youtube Channels</H2>
+			<Typography.H2 class="blur-bg">Youtube Channels</Typography.H2>
 			<ul class="list">
 				{#each data.youtube as { name, link, tags }}
 					<li class="blur-bg">
-						<H3 tag="div"><Link href={link}>{name}</Link></H3>
+						<Typography.H3 tag="div"><Link href={link}>{name}</Link></Typography.H3>
 						<TagList {tags} />
 					</li>
 				{/each}
 			</ul>
 		</section>
 		<section>
-			<H2 class="blur-bg">Books</H2>
+			<Typography.H2 class="blur-bg">Books</Typography.H2>
 			<ul class="list">
 				{#each data.books as { name, link, tags }}
 					<li class="blur-bg">
-						<H3 tag="div"><Link href={link}>{name}</Link></H3>
+						<Typography.H3 tag="div"><Link href={link}>{name}</Link></Typography.H3>
 						<TagList {tags} />
 					</li>
 				{/each}
