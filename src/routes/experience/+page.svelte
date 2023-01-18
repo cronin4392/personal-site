@@ -14,6 +14,9 @@
 		end-to-end projects. I pride myself in my ability to work well in a team setting and meeting
 		business goals with realistic technical solutions.
 	</p>
+</header>
+
+<article>
 	<div class="skills">
 		<div>
 			<Typography.H2>Skills</Typography.H2>
@@ -45,8 +48,7 @@
 			{/each}
 		</ol>
 	</section>
-</header>
-<main class="container show-visited" />
+</article>
 
 <style lang="scss">
 	header {

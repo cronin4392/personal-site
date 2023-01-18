@@ -29,32 +29,26 @@
 	];
 </script>
 
-<main class="show-visited">
-	<header>
-		<h1><span class="blur-bg">Hi, <br />I’m Stephen Cronin</span></h1>
-		<p class="blur-bg">
-			I am a software developer with an eye for design. Throughout my career I have worked across a
-			wide variety of industries and team compositions. I have extensive experience in web
-			development with a focus on the front-end. I pride myself in my ability to work well in a team
-			setting and meeting business goals with realistic technical solutions.
-		</p>
-	</header>
-	<section>
-		<p class="blur-bg">
-			I currently work at <Link href="https://tulip.co">Tulip</Link> as a software engineer. During the
-			night I am an
-			<Link href="https://www.visualsss.net">amatuer VJ artist</Link>, creating original realtime
-			graphics for live music acts. I’ve previously worked for
-			<LinkList links={employers} /> ❧
-		</p>
-	</section>
-</main>
+<header>
+	<h1><span class="blur-bg">Hi, <br />I’m Stephen Cronin</span></h1>
+	<p class="blur-bg">
+		I am a software developer with an eye for design. Throughout my career I have worked across a
+		wide variety of industries and team compositions. I have extensive experience in web development
+		with a focus on the front-end. I pride myself in my ability to work well in a team setting and
+		meeting business goals with realistic technical solutions.
+	</p>
+</header>
+<article>
+	<p class="blur-bg">
+		I currently work at <Link href="https://tulip.co">Tulip</Link> as a software engineer. During the
+		night I am an
+		<Link href="https://www.visualsss.net">amatuer VJ artist</Link>, creating original realtime
+		graphics for live music acts. I’ve previously worked for
+		<LinkList links={employers} /> ❧
+	</p>
+</article>
 
 <style lang="scss">
-	header {
-		padding-top: 1px; // keep margin inside
-	}
-
 	h1 {
 		font-size: 2.2em;
 		margin-top: 3em;

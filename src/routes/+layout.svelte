@@ -5,6 +5,15 @@
 
 <Nav />
 
-<slot />
+<main class="show-visited">
+	<slot />
+</main>
 
 <BackgroundImages />
+
+<style>
+	main {
+		padding-top: var(--site-padding);
+		padding-bottom: var(--site-padding);
+	}
+</style>

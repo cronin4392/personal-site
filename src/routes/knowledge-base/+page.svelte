@@ -15,13 +15,14 @@
 		engineering, psychology, and world affairs with a bit of fun mixed in.
 	</p>
 </header>
-<main class="container show-visited">
+
+<div class="container">
 	<Typography.Condensed tag="nav" class="blur-bg">
 		{#each data.tags as { tag, count }}
 			<div>{tag}: {count}</div>
 		{/each}
 	</Typography.Condensed>
-	<div>
+	<article>
 		<section>
 			<Typography.H2 class="blur-bg">Youtube Channels</Typography.H2>
 			<ul class="list">
@@ -44,8 +45,8 @@
 				{/each}
 			</ul>
 		</section>
-	</div>
-</main>
+	</article>
+</div>
 
 <style lang="scss">
 	header {
