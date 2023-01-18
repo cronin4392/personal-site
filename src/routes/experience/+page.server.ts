@@ -1,5 +1,6 @@
 import type { PageServerLoad } from './$types';
+import experience from '$lib/data/experience';
 
 export const load = (async () => {
-	return {};
+	return experience;
 }) satisfies PageServerLoad;

@@ -1,7 +1,7 @@
 <script lang="ts">
 	export let href: string;
 	export let active: boolean = false;
-	$: external = href.indexOf('http') === 0;
+	const external = href.indexOf('http') === 0;
 </script>
 
 {#if external}

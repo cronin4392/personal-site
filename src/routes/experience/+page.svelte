@@ -1,5 +1,10 @@
 <script lang="ts">
 	import type { PageData } from './$types';
+	import Paragraphs from '$lib/components/Paragraphs.svelte';
+	import Date from '$lib/components/Date.svelte';
+	import MaybeLink from '$lib/components/MaybeLink.svelte';
+	import JobItem from '$lib/components/JobItem.svelte';
+	export let data: PageData;
 </script>
 
 <header class="blur-bg">
@@ -11,15 +16,35 @@
 		end-to-end projects. I pride myself in my ability to work well in a team setting and meeting
 		business goals with realistic technical solutions.
 	</p>
-	<div>
-		<h3>Skills</h3>
-		<p>
-			Typescript, React, Next.js, Node.js, ES6, CSS, HTML Canvas, Firebase, Postgres, Python, PHP,
-			Functional Programming, Agile, Touchdesigner
-		</p>
-		<h3>Interests</h3>
-		<p>Realtime Applications (Unreal Engine), Generative Art, Computer Vision, GLSL</p>
+	<div class="skills">
+		<div>
+			<h3>Skills</h3>
+			<p>
+				Typescript, React, Next.js, Node.js, ES6, CSS, HTML Canvas, Firebase, Postgres, Python, PHP,
+				Functional Programming, Agile, Touchdesigner
+			</p>
+		</div>
+		<div>
+			<h3>Interests</h3>
+			<p>Realtime Applications (Unreal Engine), Generative Art, Computer Vision, GLSL</p>
+		</div>
 	</div>
+	<section>
+		<h2>Career</h2>
+		<ol class="list">
+			{#each data.jobs as item}
+				<JobItem {...item} />
+			{/each}
+		</ol>
+	</section>
+	<section>
+		<h2>Freelance</h2>
+		<ol class="list">
+			{#each data.freelance as item}
+				<JobItem {...item} />
+			{/each}
+		</ol>
+	</section>
 </header>
 <main class="container show-visited" />
 
@@ -34,5 +59,26 @@
 		font-stretch: expanded;
 		font-weight: 400;
 		margin-top: 16rem;
+	}
+
+	.skills {
+		font-size: 0.6em;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1rem;
+	}
+
+	.list {
+		list-style: none;
+		padding: 0;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		column-gap: 1rem;
+		row-gap: 1.5rem;
+		font-size: 1.5rem;
+
+		@media screen and (min-width: 720px) {
+			grid-template-columns: repeat(3, 1fr);
+		}
 	}
 </style>
