@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { PageData } from './$types';
+	import H1 from '$lib/components/atoms/typography/H1.svelte';
 	import Link from '$lib/components/Link.svelte';
 	import TagList from '$lib/components/TagList.svelte';
 
@@ -7,7 +8,7 @@
 </script>
 
 <header>
-	<h1 class="blur-bg">Knowledge Base</h1>
+	<H1 class="blur-bg">Knowledge Base</H1>
 	<p class="blur-bg">
 		This is a repository of resources that I have collected over the years. There's everything from
 		links, playlists, places, and books. Some of the topics include science, technology,
@@ -49,14 +50,6 @@
 <style lang="scss">
 	header {
 		margin-bottom: 4rem;
-	}
-
-	h1 {
-		font-size: 2.6rem;
-		font-family: var(--font-sans);
-		font-stretch: expanded;
-		font-weight: 400;
-		margin-top: 2rem;
 	}
 
 	h2 {

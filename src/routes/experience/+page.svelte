@@ -1,14 +1,12 @@
 <script lang="ts">
 	import type { PageData } from './$types';
-	import Paragraphs from '$lib/components/Paragraphs.svelte';
-	import Date from '$lib/components/Date.svelte';
-	import MaybeLink from '$lib/components/MaybeLink.svelte';
+	import H1 from '$lib/components/atoms/typography/H1.svelte';
 	import JobItem from '$lib/components/JobItem.svelte';
 	export let data: PageData;
 </script>
 
 <header class="blur-bg">
-	<h1>Experience</h1>
+	<H1>Experience</H1>
 	<p>
 		I am a senior web developer with an eye for design. Throughout my career I have worked across a
 		wide variety of industries and team compositions. While I do have extensive knowledge in
@@ -51,14 +49,6 @@
 <style lang="scss">
 	header {
 		margin-bottom: 4rem;
-	}
-
-	h1 {
-		font-size: 2.6rem;
-		font-family: var(--font-sans);
-		font-stretch: expanded;
-		font-weight: 400;
-		margin-top: 16rem;
 	}
 
 	.skills {
