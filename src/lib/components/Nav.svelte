@@ -6,6 +6,7 @@
 		{ text: '❧', href: '/' },
 		{ text: 'Experience', href: '/experience' },
 		{ text: 'Knowledge Base', href: '/knowledge-base' },
+		{ text: 'Blog', href: '/blog/post-1' },
 	];
 </script>
 
