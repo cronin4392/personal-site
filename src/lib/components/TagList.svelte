@@ -1,12 +1,14 @@
 <script lang="ts">
+	import Typography from '$lib/components/Typography';
+	import Condensed from './Typography/Condensed.svelte';
 	export let tags: Array<string>;
 </script>
 
-<ul class="font-tags">
+<Typography.Condensed tag="ul">
 	{#each tags as tag}
 		<li>{tag}</li>
 	{/each}
-</ul>
+</Typography.Condensed>
 
 <style lang="scss">
 	ul {

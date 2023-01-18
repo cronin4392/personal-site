@@ -16,15 +16,17 @@
 	</p>
 	<div class="skills">
 		<div>
-			<h3>Skills</h3>
-			<p>
+			<Typography.H2>Skills</Typography.H2>
+			<Typography.Condensed tag="p">
 				Typescript, React, Next.js, Node.js, ES6, CSS, HTML Canvas, Firebase, Postgres, Python, PHP,
 				Functional Programming, Agile, Touchdesigner
-			</p>
+			</Typography.Condensed>
 		</div>
 		<div>
-			<h3>Interests</h3>
-			<p>Realtime Applications (Unreal Engine), Generative Art, Computer Vision, GLSL</p>
+			<Typography.H2>Interests</Typography.H2>
+			<Typography.Condensed tag="p">
+				Realtime Applications (Unreal Engine), Generative Art, Computer Vision, GLSL
+			</Typography.Condensed>
 		</div>
 	</div>
 	<section>

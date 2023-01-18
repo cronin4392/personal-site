@@ -16,11 +16,11 @@
 	</p>
 </header>
 <main class="container show-visited">
-	<nav class="font-tags blur-bg">
+	<Typography.Condensed tag="nav" class="blur-bg">
 		{#each data.tags as { tag, count }}
 			<div>{tag}: {count}</div>
 		{/each}
-	</nav>
+	</Typography.Condensed>
 	<div>
 		<section>
 			<Typography.H2 class="blur-bg">Youtube Channels</Typography.H2>
