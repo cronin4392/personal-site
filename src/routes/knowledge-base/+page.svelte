@@ -1,6 +1,8 @@
 <script lang="ts">
 	import type { PageData } from './$types';
 	import H1 from '$lib/components/atoms/typography/H1.svelte';
+	import H2 from '$lib/components/atoms/typography/H2.svelte';
+	import H3 from '$lib/components/atoms/typography/H3.svelte';
 	import Link from '$lib/components/Link.svelte';
 	import TagList from '$lib/components/TagList.svelte';
 
@@ -23,22 +25,22 @@
 	</nav>
 	<div>
 		<section>
-			<h2 class="blur-bg">Youtube Channels</h2>
+			<H2 class="blur-bg">Youtube Channels</H2>
 			<ul class="list">
 				{#each data.youtube as { name, link, tags }}
 					<li class="blur-bg">
-						<Link href={link}>{name}</Link>
+						<H3 tag="div"><Link href={link}>{name}</Link></H3>
 						<TagList {tags} />
 					</li>
 				{/each}
 			</ul>
 		</section>
 		<section>
-			<h2 class="blur-bg">Books</h2>
+			<H2 class="blur-bg">Books</H2>
 			<ul class="list">
 				{#each data.books as { name, link, tags }}
 					<li class="blur-bg">
-						<Link href={link}>{name}</Link>
+						<H3 tag="div"><Link href={link}>{name}</Link></H3>
 						<TagList {tags} />
 					</li>
 				{/each}
@@ -50,14 +52,6 @@
 <style lang="scss">
 	header {
 		margin-bottom: 4rem;
-	}
-
-	h2 {
-		font-size: 1.6rem;
-		font-family: var(--font-sans);
-		font-stretch: expanded;
-		font-weight: 300;
-		margin-bottom: 1rem;
 	}
 
 	nav {
@@ -76,7 +70,6 @@
 		@media screen and (min-width: 720px) {
 			grid-template-columns: 9rem 1fr;
 			gap: calc(var(--site-padding) / 2);
-			font-size: 1.5rem;
 		}
 	}
 

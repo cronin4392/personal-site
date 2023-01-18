@@ -1,6 +1,7 @@
 <script lang="ts">
 	import type { PageData } from './$types';
 	import H1 from '$lib/components/atoms/typography/H1.svelte';
+	import H2 from '$lib/components/atoms/typography/H2.svelte';
 	import JobItem from '$lib/components/JobItem.svelte';
 	export let data: PageData;
 </script>
@@ -28,7 +29,7 @@
 		</div>
 	</div>
 	<section>
-		<h2>Career</h2>
+		<H2>Career</H2>
 		<ol class="list">
 			{#each data.jobs as item}
 				<JobItem {...item} />
@@ -36,7 +37,7 @@
 		</ol>
 	</section>
 	<section>
-		<h2>Freelance</h2>
+		<H2>Freelance</H2>
 		<ol class="list">
 			{#each data.freelance as item}
 				<JobItem {...item} />

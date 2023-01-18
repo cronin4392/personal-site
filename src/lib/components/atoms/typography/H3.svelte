@@ -1,5 +1,5 @@
 <script lang="ts">
-	export let tag: string = 'h1';
+	export let tag: string = 'h2';
 	let className: string | null = null;
 	export { className as class };
 </script>
@@ -8,10 +8,7 @@
 
 <style>
 	* {
-		font-size: 2.6rem;
-		font-family: var(--font-sans);
-		font-stretch: expanded;
-		font-weight: 400;
-		margin-top: 16rem;
+		font-size: 1.5rem;
+		font-family: var(--font-serif);
 	}
 </style>
