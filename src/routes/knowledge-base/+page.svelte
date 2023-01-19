@@ -17,11 +17,13 @@
 </header>
 
 <div class="container">
-	<Typography.Condensed tag="nav" class="blur-bg">
-		{#each data.tags as { tag, count }}
-			<div>{tag}: {count}</div>
-		{/each}
-	</Typography.Condensed>
+	<nav>
+		<Typography.Condensed tag="div" class="blur-bg">
+			{#each data.tags as { tag, count }}
+				<div>{tag}: {count}</div>
+			{/each}
+		</Typography.Condensed>
+	</nav>
 	<article>
 		<section>
 			<Typography.H2 class="blur-bg">Youtube Channels</Typography.H2>
