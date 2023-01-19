@@ -49,8 +49,4 @@
 			white-space: pre;
 		}
 	}
-
-	.active {
-		color: red;
-	}
 </style>
