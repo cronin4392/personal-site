@@ -13,5 +13,6 @@
 		font-stretch: expanded;
 		font-weight: 400;
 		margin-top: 16rem;
+		margin-bottom: 2rem;
 	}
 </style>
