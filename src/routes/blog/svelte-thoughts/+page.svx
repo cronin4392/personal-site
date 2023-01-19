@@ -1,0 +1,6 @@
+---
+title: My thoughts on SvelteKit
+date: 2023-01-20
+---
+
+Some amazing content.

@@ -1,12 +1,12 @@
 <script lang="ts">
-	import Link from '$lib/components/Link.svelte';
 	import { page } from '$app/stores';
+	import Link from '$lib/components/Link.svelte';
 
 	const links = [
 		{ text: '❧', href: '/' },
 		{ text: 'Experience', href: '/experience' },
 		{ text: 'Knowledge Base', href: '/knowledge-base' },
-		{ text: 'Blog', href: '/blog/post-1' },
+		{ text: 'Blog', href: '/blog' },
 	];
 
 	const isActive = (link: string, route: string | null) => {
