@@ -12,6 +12,7 @@
 		font-family: var(--font-sans);
 		font-stretch: expanded;
 		font-weight: 300;
+		margin-top: 2rem;
 		margin-bottom: 1rem;
 	}
 </style>

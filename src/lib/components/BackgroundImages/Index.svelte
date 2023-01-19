@@ -33,5 +33,6 @@
 
 	img {
 		transform: translateX(-50%) translateY(-50%);
+		max-width: none;
 	}
 </style>

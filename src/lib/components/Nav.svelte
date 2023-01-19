@@ -4,24 +4,29 @@
 
 	const links = [
 		{ text: '❧', href: '/' },
-		{ text: 'Experience', href: '/experience' },
+		{ text: 'Experience', href: '/experience', matches: ['/projects'] },
 		{ text: 'Knowledge Base', href: '/knowledge-base' },
 		{ text: 'Blog', href: '/blog' },
 	];
 
-	const isActive = (link: string, route: string | null) => {
-		if (link === '/') {
-			return link === route;
-		}
-		return route?.indexOf(link) === 0;
+	const isActive = (matches: Array<string | null>, route: string | null) => {
+		return matches.reduce((acc, link) => {
+			if (acc || !link || !route) {
+				return acc;
+			}
+			if (link === '/') {
+				return link === route;
+			}
+			return route.indexOf(link) === 0;
+		}, false);
 	};
 </script>
 
 <nav>
 	<ul>
-		{#each links as { text, href }}
+		{#each links as { text, href, matches = [] }}
 			<li>
-				<Link {href} active={isActive(href, $page.route.id)}>{text}</Link>
+				<Link {href} active={isActive([href, ...matches], $page.route.id)}>{text}</Link>
 			</li>
 		{/each}
 	</ul>

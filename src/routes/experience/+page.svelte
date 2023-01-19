@@ -1,20 +1,25 @@
 <script lang="ts">
 	import type { PageData } from './$types';
 	import Typography from '$lib/components/Typography';
+	import Link from '$lib/components/Link.svelte';
 	import JobItem from '$lib/components/JobItem.svelte';
 	export let data: PageData;
 </script>
 
 <header class="blur-bg">
 	<Typography.H1>Experience</Typography.H1>
-	<p>
-		I am a senior web developer with an eye for design. Throughout my career I have worked across a
-		wide variety of industries and team compositions. While I do have extensive knowledge in
-		front-end development I have worked across the full-stack and am capable of delivering
-		end-to-end projects. I pride myself in my ability to work well in a team setting and meeting
-		business goals with realistic technical solutions.
-	</p>
 </header>
+
+<aside>
+	<Typography.H2>Selected Projects</Typography.H2>
+	<ul class="list">
+		<li>
+			<Typography.H3>
+				<Link href="/projects/elden-ring">Elden Ring Rune Calculator</Link>
+			</Typography.H3>
+		</li>
+	</ul>
+</aside>
 
 <article>
 	<div class="skills">
@@ -52,7 +57,7 @@
 
 <style lang="scss">
 	header {
-		margin-bottom: 4rem;
+		margin-bottom: 2rem;
 	}
 
 	.skills {
