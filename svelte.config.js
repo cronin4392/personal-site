@@ -11,6 +11,7 @@ const config = {
 		vitePreprocess(),
 		mdsvex({
 			extensions: ['.svx'],
+			layout: './src/routes/blog/layout.svelte',
 		}),
 	],
 

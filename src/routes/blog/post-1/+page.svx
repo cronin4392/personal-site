@@ -1,8 +1,6 @@
 ---
 title: My lovely article
-author: Dr. Fabuloso the Fabulous
+date: 2023-01-20
 ---
-
-# Yo yo by Alien
 
 Some amazing content.
