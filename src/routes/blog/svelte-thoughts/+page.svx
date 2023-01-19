@@ -4,3 +4,5 @@ date: 2023-01-20
 ---
 
 Some amazing content.
+
+[Svelte image import snippet](https://github.com/sveltejs/kit/issues/241#issuecomment-1274046866)
