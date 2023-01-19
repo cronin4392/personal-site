@@ -2,19 +2,26 @@
 	import Link from '$lib/components/Link.svelte';
 	import { page } from '$app/stores';
 
-	let links = [
+	const links = [
 		{ text: '❧', href: '/' },
 		{ text: 'Experience', href: '/experience' },
 		{ text: 'Knowledge Base', href: '/knowledge-base' },
 		{ text: 'Blog', href: '/blog/post-1' },
 	];
+
+	const isActive = (link: string, route: string | null) => {
+		if (link === '/') {
+			return link === route;
+		}
+		return route?.indexOf(link) === 0;
+	};
 </script>
 
 <nav>
 	<ul>
 		{#each links as { text, href }}
 			<li>
-				<Link {href} active={href === $page.route.id}>{text}</Link>
+				<Link {href} active={isActive(href, $page.route.id)}>{text}</Link>
 			</li>
 		{/each}
 	</ul>
