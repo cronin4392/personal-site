@@ -13,7 +13,7 @@
 
 <style>
 	main {
-		padding-top: var(--site-padding);
+		padding-top: 64px;
 		padding-bottom: var(--site-padding);
 	}
 </style>

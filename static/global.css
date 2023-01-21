@@ -151,7 +151,7 @@ img {
 	position: absolute;
 	z-index: -1;
 	inset: -1rem -2rem;
-	background-color: var(--color-yellow);
+	background-color: rgba(255, 234, 184, 0.9);;
 	pointer-events: none;
 }
 

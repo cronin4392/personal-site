@@ -1,24 +1,8 @@
 <script lang="ts">
-	import Image from './Image.svelte';
+	// import Image from './Image.svelte';
 </script>
 
-<div class="container">
-	<Image>
-		<img src="./images/1.png?w=800&webp" alt="Flower" />
-	</Image>
-	<Image>
-		<img src="./images/2.png?w=800&webp" alt="Flower" />
-	</Image>
-	<Image>
-		<img src="./images/3.png?w=800&webp" alt="Flower" />
-	</Image>
-	<Image>
-		<img src="./images/4.png?w=800&webp" alt="Flower" />
-	</Image>
-	<Image>
-		<img src="./images/5.png?w=800&webp" alt="Flower" />
-	</Image>
-</div>
+<div class="container" />
 
 <style>
 	.container {
