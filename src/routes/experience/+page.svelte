@@ -1,65 +1,63 @@
 <script lang="ts">
 	import type { PageData } from './$types';
+	import Layout from '$lib/layouts/Page.svelte';
 	import Typography from '$lib/components/Typography';
 	import Link from '$lib/components/Link.svelte';
 	import JobItem from '$lib/components/JobItem.svelte';
 	export let data: PageData;
 </script>
 
-<header class="blur-bg">
-	<Typography.H1>Experience</Typography.H1>
-</header>
+<Layout>
+	<svelte:fragment slot="title">Experience</svelte:fragment>
+	<svelte:fragment slot="content">
+		<aside>
+			<Typography.H2>Selected Projects</Typography.H2>
+			<ul class="list">
+				<li>
+					<Typography.H3>
+						<Link href="/projects/elden-ring">Elden Ring Rune Calculator</Link>
+					</Typography.H3>
+				</li>
+			</ul>
+		</aside>
 
-<aside>
-	<Typography.H2>Selected Projects</Typography.H2>
-	<ul class="list">
-		<li>
-			<Typography.H3>
-				<Link href="/projects/elden-ring">Elden Ring Rune Calculator</Link>
-			</Typography.H3>
-		</li>
-	</ul>
-</aside>
-
-<article>
-	<div class="skills">
-		<div>
-			<Typography.H2>Skills</Typography.H2>
-			<Typography.Condensed tag="p">
-				Typescript, React, Next.js, Node.js, ES6, CSS, HTML Canvas, Firebase, Postgres, Python, PHP,
-				Functional Programming, Agile, Touchdesigner
-			</Typography.Condensed>
-		</div>
-		<div>
-			<Typography.H2>Interests</Typography.H2>
-			<Typography.Condensed tag="p">
-				Realtime Applications (Unreal Engine), Generative Art, Computer Vision, GLSL
-			</Typography.Condensed>
-		</div>
-	</div>
-	<section>
-		<Typography.H2>Career</Typography.H2>
-		<ol class="list">
-			{#each data.jobs as item}
-				<JobItem {...item} />
-			{/each}
-		</ol>
-	</section>
-	<section>
-		<Typography.H2>Freelance</Typography.H2>
-		<ol class="list">
-			{#each data.freelance as item}
-				<JobItem {...item} />
-			{/each}
-		</ol>
-	</section>
-</article>
+		<article>
+			<div class="skills">
+				<div>
+					<Typography.H2>Skills</Typography.H2>
+					<Typography.Condensed tag="p">
+						Typescript, React, Next.js, Node.js, ES6, CSS, HTML Canvas, Firebase, Postgres, Python,
+						PHP, Functional Programming, Agile, Touchdesigner
+					</Typography.Condensed>
+				</div>
+				<div>
+					<Typography.H2>Interests</Typography.H2>
+					<Typography.Condensed tag="p">
+						Realtime Applications (Unreal Engine), Generative Art, Computer Vision, GLSL
+					</Typography.Condensed>
+				</div>
+			</div>
+			<section>
+				<Typography.H2>Career</Typography.H2>
+				<ol class="list">
+					{#each data.jobs as item}
+						<JobItem {...item} />
+					{/each}
+				</ol>
+			</section>
+			<section>
+				<Typography.H2>Freelance</Typography.H2>
+				<ol class="list">
+					{#each data.freelance as item}
+						<JobItem {...item} />
+					{/each}
+				</ol>
+			</section>
+		</article>
+	</svelte:fragment>
+</Layout>
 
 <style lang="scss">
-	header {
-		margin-bottom: 2rem;
-	}
-
 	.skills {
 		font-size: 0.6em;
 		display: grid;

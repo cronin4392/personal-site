@@ -1,5 +1,5 @@
 <script>
-	import H1 from '$lib/components/Typography/H1.svelte';
+	import Layout from '$lib/layouts/Page.svelte';
 	import Date from '$lib/components/Date.svelte';
 
 	// This file needs to be js as mdsvex has issues parsing Typescript
@@ -17,11 +17,14 @@
 	<title>{title}</title>
 </svelte:head>
 
-<header class="blur-bg">
-	<H1>{title}</H1>
-	<div><Date start={date} /></div>
-</header>
-
-<article class="blur-bg">
-	<slot />
-</article>
+<Layout>
+	<svelte:fragment slot="title">{title}</svelte:fragment>
+	<svelte:fragment slot="intro">
+		<Date start={date} />
+	</svelte:fragment>
+	<svelte:fragment slot="content">
+		<article class="blur-bg">
+			<slot />
+		</article>
+	</svelte:fragment>
+</Layout>
