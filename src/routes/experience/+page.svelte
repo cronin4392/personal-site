@@ -21,39 +21,37 @@
 			</ul>
 		</aside>
 
-		<article>
-			<div class="skills">
-				<div>
-					<Typography.H2>Skills</Typography.H2>
-					<Typography.Condensed tag="p">
-						Typescript, React, Next.js, Node.js, ES6, CSS, HTML Canvas, Firebase, Postgres, Python,
-						PHP, Functional Programming, Agile, Touchdesigner
-					</Typography.Condensed>
-				</div>
-				<div>
-					<Typography.H2>Interests</Typography.H2>
-					<Typography.Condensed tag="p">
-						Realtime Applications (Unreal Engine), Generative Art, Computer Vision, GLSL
-					</Typography.Condensed>
-				</div>
+		<div class="skills">
+			<div>
+				<Typography.H2>Skills</Typography.H2>
+				<Typography.Condensed tag="p">
+					Typescript, React, Next.js, Node.js, ES6, CSS, HTML Canvas, Firebase, Postgres, Python,
+					PHP, Functional Programming, Agile, Touchdesigner
+				</Typography.Condensed>
 			</div>
-			<section>
-				<Typography.H2>Career</Typography.H2>
-				<ol class="list">
-					{#each data.jobs as item}
-						<JobItem {...item} />
-					{/each}
-				</ol>
-			</section>
-			<section>
-				<Typography.H2>Freelance</Typography.H2>
-				<ol class="list">
-					{#each data.freelance as item}
-						<JobItem {...item} />
-					{/each}
-				</ol>
-			</section>
-		</article>
+			<div>
+				<Typography.H2>Interests</Typography.H2>
+				<Typography.Condensed tag="p">
+					Realtime Applications (Unreal Engine), Generative Art, Computer Vision, GLSL
+				</Typography.Condensed>
+			</div>
+		</div>
+		<section>
+			<Typography.H2>Career</Typography.H2>
+			<ol class="list">
+				{#each data.jobs as item}
+					<JobItem {...item} />
+				{/each}
+			</ol>
+		</section>
+		<section>
+			<Typography.H2>Freelance</Typography.H2>
+			<ol class="list">
+				{#each data.freelance as item}
+					<JobItem {...item} />
+				{/each}
+			</ol>
+		</section>
 	</svelte:fragment>
 </Layout>
 

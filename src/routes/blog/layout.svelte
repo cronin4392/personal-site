@@ -23,8 +23,6 @@
 		<Date start={date} />
 	</svelte:fragment>
 	<svelte:fragment slot="content">
-		<article class="blur-bg">
-			<slot />
-		</article>
+		<slot />
 	</svelte:fragment>
 </Layout>
