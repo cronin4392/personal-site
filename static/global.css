@@ -117,6 +117,14 @@ p {
     max-width: 72ch;
 }
 
+article p {
+	font-family: var(--font-sans);
+	font-stretch: expanded;
+	font-weight: 300;
+	font-size: 1.6rem;
+	line-height: 1.6;
+}
+
 ul,
 ol {
 	list-style: none;
