@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Layout from '$lib/layouts/Page.svelte';
 	import Link from '$lib/components/Link.svelte';
 	import LinkList from '$lib/components/LinkList.svelte';
 
@@ -29,39 +30,29 @@
 	];
 </script>
 
-<header>
-	<h1><span class="blur-bg">Hi, <br />I’m Stephen Cronin</span></h1>
-	<p class="blur-bg">
-		I am a software developer with an eye for design. Throughout my career I have worked across a
-		wide variety of industries and team compositions. I have extensive experience in web development
-		with a focus on the front-end. I pride myself in my ability to work well in a team setting and
-		meeting business goals with realistic technical solutions.
-	</p>
-</header>
-<article>
-	<p class="blur-bg">
-		I currently work at <Link href="https://tulip.co">Tulip</Link> as a software engineer. During the
-		night I am an
-		<Link href="https://www.visualsss.net">amatuer VJ artist</Link>, creating original realtime
-		graphics for live music acts. I’ve previously worked for
-		<LinkList links={employers} /> ❧
-	</p>
-</article>
+<Layout image={1}>
+	<svelte:fragment slot="title">Hi, <br />I’m Stephen Cronin</svelte:fragment>
+	<svelte:fragment slot="intro">
+		<p>
+			I am a software developer with an eye for design. Throughout my career I have worked across a
+			wide variety of industries and team compositions. I have extensive experience in web
+			development with a focus on the front-end. I pride myself in my ability to work well in a team
+			setting and meeting business goals with realistic technical solutions.
+		</p>
+	</svelte:fragment>
+	<svelte:fragment slot="content">
+		<p class="swash">
+			I currently work at <Link href="https://tulip.co">Tulip</Link> as a software engineer. During the
+			night I am an
+			<Link href="https://www.visualsss.net">amatuer VJ artist</Link>, creating original realtime
+			graphics for live music acts. I’ve previously worked for
+			<LinkList links={employers} /> ❧
+		</p>
+	</svelte:fragment>
+</Layout>
 
 <style lang="scss">
-	h1 {
-		font-size: 2.2em;
-		margin-top: 3em;
-		margin-bottom: 1.5em;
-
-		@media screen and (min-width: 720px) {
-			font-size: 3em;
-			margin-top: 1.75em;
-			margin-bottom: 0.75em;
-		}
-	}
-
-	section {
+	.swash {
 		--link-font: 'Cloister Swash';
 	}
 </style>

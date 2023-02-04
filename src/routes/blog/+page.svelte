@@ -8,7 +8,7 @@
 	export let data: PageData;
 </script>
 
-<Layout>
+<Layout image={5}>
 	<svelte:fragment slot="title">Blog</svelte:fragment>
 	<svelte:fragment slot="content">
 		{#each data.posts as post}

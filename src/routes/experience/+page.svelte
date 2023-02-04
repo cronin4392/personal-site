@@ -7,7 +7,7 @@
 	export let data: PageData;
 </script>
 
-<Layout>
+<Layout image={2}>
 	<svelte:fragment slot="title">Experience</svelte:fragment>
 	<svelte:fragment slot="content">
 		<aside>

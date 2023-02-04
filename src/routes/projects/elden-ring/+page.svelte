@@ -3,7 +3,7 @@
 	import ImageSlider, { Slide } from '$lib/components/ImageSlider';
 </script>
 
-<Layout>
+<Layout image={4}>
 	<svelte:fragment slot="title">Elden Ring Rune Calculator</svelte:fragment>
 	<svelte:fragment slot="intro">
 		<p>

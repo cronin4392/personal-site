@@ -1,11 +1,21 @@
 <script lang="ts">
+	export let image: number;
+
 	import Typography from '$lib/components/Typography';
+
+	import Image1 from './images/1.png';
+	import Image2 from './images/2.png';
+	import Image3 from './images/3.png';
+	import Image4 from './images/4.png';
+	import Image5 from './images/5.png';
+
+	const images = [Image1, Image2, Image3, Image4, Image5];
 </script>
 
 <header>
 	<div class="image-wrapper">
 		<div class="image">
-			<img src="./images/1.png" alt="Flower" />
+			<img src={images[image % images.length]} alt="Flower" />
 		</div>
 	</div>
 	<Typography.H1>

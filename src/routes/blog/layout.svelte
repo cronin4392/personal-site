@@ -17,7 +17,7 @@
 	<title>{title}</title>
 </svelte:head>
 
-<Layout>
+<Layout image={5}>
 	<svelte:fragment slot="title">{title}</svelte:fragment>
 	<svelte:fragment slot="intro">
 		<Date start={date} />

@@ -8,7 +8,7 @@
 	export let data: PageData;
 </script>
 
-<Layout>
+<Layout image={3}>
 	<svelte:fragment slot="title">Knowledge Base</svelte:fragment>
 	<svelte:fragment slot="intro">
 		<p>
