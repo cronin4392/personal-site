@@ -1,7 +1,10 @@
 import type { PageServerLoad } from './$types';
 import knowledgebase from '$lib/data/knowledgebase';
+import { getPlaylists } from '$lib/lib/spotify';
 
 export const load = (async () => {
+	const playlists = await getPlaylists();
+
 	// Compute tags
 	let tagsDict: { [key: string]: number } = {};
 	[...knowledgebase.youtube, ...knowledgebase.books].forEach(({ tags }) => {
@@ -16,5 +19,5 @@ export const load = (async () => {
 	const tagsList = Object.keys(tagsDict).map((tag) => ({ tag, count: tagsDict[tag] }));
 	tagsList.sort((a, b) => a.tag.localeCompare(b.tag));
 
-	return { ...knowledgebase, tags: tagsList };
+	return { ...knowledgebase, tags: tagsList, playlists };
 }) satisfies PageServerLoad;

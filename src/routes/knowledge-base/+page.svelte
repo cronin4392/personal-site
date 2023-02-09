@@ -49,6 +49,15 @@
 						{/each}
 					</ul>
 				</section>
+				<section class="list">
+					<Typography.H2 class="blur-bg">Playlists</Typography.H2>
+					{#each data.playlists as playlist}
+						<Link href={playlist.uri}>
+							<Typography.H3>{playlist.name}</Typography.H3>
+							<p>{playlist.tracks.total} tracks</p>
+						</Link>
+					{/each}
+				</section>
 			</div>
 		</div>
 	</svelte:fragment>
