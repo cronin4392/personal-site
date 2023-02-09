@@ -5,21 +5,25 @@
 	import Link from '$lib/components/Link.svelte';
 	import JobItem from '$lib/components/JobItem.svelte';
 	export let data: PageData;
+	const { experience, projects } = data;
 </script>
 
 <Layout image={2}>
 	<svelte:fragment slot="title">Experience</svelte:fragment>
 	<svelte:fragment slot="content">
-		<aside>
+		<section>
 			<Typography.H2>Selected Projects</Typography.H2>
 			<ul class="list">
-				<li>
-					<Typography.H3>
-						<Link href="/projects/elden-ring">Elden Ring Rune Calculator</Link>
-					</Typography.H3>
-				</li>
+				{#each projects as item}
+					<li>
+						<Typography.H3>
+							<Link href="/projects/{item.id}">{item.name}</Link>
+						</Typography.H3>
+						<Typography.Condensed tag="p">{item.company}</Typography.Condensed>
+					</li>
+				{/each}
 			</ul>
-		</aside>
+		</section>
 
 		<div class="skills">
 			<div>
@@ -39,7 +43,7 @@
 		<section>
 			<Typography.H2>Career</Typography.H2>
 			<ol class="list">
-				{#each data.jobs as item}
+				{#each experience.jobs as item}
 					<JobItem {...item} />
 				{/each}
 			</ol>
@@ -47,7 +51,7 @@
 		<section>
 			<Typography.H2>Freelance</Typography.H2>
 			<ol class="list">
-				{#each data.freelance as item}
+				{#each experience.freelance as item}
 					<JobItem {...item} />
 				{/each}
 			</ol>
@@ -72,6 +76,10 @@
 
 		@media screen and (min-width: 720px) {
 			grid-template-columns: repeat(3, 1fr);
+		}
+
+		:global(p) {
+			margin: 0;
 		}
 	}
 </style>
