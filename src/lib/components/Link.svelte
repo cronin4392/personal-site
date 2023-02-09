@@ -19,6 +19,10 @@
 		transition: opacity 0.3s ease-in-out;
 	}
 
+	a:hover {
+		opacity: 0.5;
+	}
+
 	a[data-active='true'] {
 		color: var(--link-active-color);
 	}

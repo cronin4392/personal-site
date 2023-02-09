@@ -33,15 +33,22 @@
 </article>
 
 <style lang="scss">
+	header {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		padding-top: 40vh;
+	}
 	.image-wrapper {
-		padding-bottom: 55vh;
-		position: relative;
+		position: fixed;
+		inset: 0;
 		z-index: -2;
+		pointer-events: none;
 	}
 
 	.image {
 		position: absolute;
-		top: -2rem;
+		top: 4rem;
 		right: 0;
 		display: flex;
 		max-width: 50vw;
