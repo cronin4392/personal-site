@@ -26,28 +26,30 @@
 					{/each}
 				</Typography.Condensed>
 			</nav>
-			<section>
-				<Typography.H2 class="blur-bg">Youtube Channels</Typography.H2>
-				<ul class="list">
-					{#each data.youtube as { name, link, tags }}
-						<li class="blur-bg">
-							<Typography.H3 tag="div"><Link href={link}>{name}</Link></Typography.H3>
-							<TagList {tags} />
-						</li>
-					{/each}
-				</ul>
-			</section>
-			<section>
-				<Typography.H2 class="blur-bg">Books</Typography.H2>
-				<ul class="list">
-					{#each data.books as { name, link, tags }}
-						<li class="blur-bg">
-							<Typography.H3 tag="div"><Link href={link}>{name}</Link></Typography.H3>
-							<TagList {tags} />
-						</li>
-					{/each}
-				</ul>
-			</section>
+			<div>
+				<section>
+					<Typography.H2 class="blur-bg">Youtube Channels</Typography.H2>
+					<ul class="list">
+						{#each data.youtube as { name, link, tags }}
+							<li class="blur-bg">
+								<Typography.H3 tag="div"><Link href={link}>{name}</Link></Typography.H3>
+								<TagList {tags} />
+							</li>
+						{/each}
+					</ul>
+				</section>
+				<section>
+					<Typography.H2 class="blur-bg">Books</Typography.H2>
+					<ul class="list">
+						{#each data.books as { name, link, tags }}
+							<li class="blur-bg">
+								<Typography.H3 tag="div"><Link href={link}>{name}</Link></Typography.H3>
+								<TagList {tags} />
+							</li>
+						{/each}
+					</ul>
+				</section>
+			</div>
 		</div>
 	</svelte:fragment>
 </Layout>
