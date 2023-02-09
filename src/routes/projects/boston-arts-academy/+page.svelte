@@ -1,6 +1,5 @@
 <script lang="ts">
 	import Layout from '$lib/layouts/Page.svelte';
-	import ImageSlider, { Slide } from '$lib/components/ImageSlider';
 </script>
 
 <Layout image={4}>
