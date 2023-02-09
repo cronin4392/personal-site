@@ -21,9 +21,11 @@
 	<Typography.H1>
 		<slot name="title" />
 	</Typography.H1>
-	<span class="blur-bg">
-		<slot name="intro" />
-	</span>
+	{#if $$slots.intro}
+		<span class="blur-bg">
+			<slot name="intro" />
+		</span>
+	{/if}
 </header>
 
 <article class="blur-bg">
