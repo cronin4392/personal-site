@@ -8,7 +8,7 @@
 
 <style>
 	* {
-		font-size: 1.5rem;
+		font-size: 2.7rem;
 		font-family: var(--font-serif);
 	}
 </style>

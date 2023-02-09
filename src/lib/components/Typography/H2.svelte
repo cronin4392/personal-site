@@ -8,11 +8,11 @@
 
 <style>
 	* {
-		font-size: 1.6rem;
+		font-size: 2.2rem;
 		font-family: var(--font-sans);
 		font-stretch: expanded;
 		font-weight: 300;
-		margin-top: 2rem;
-		margin-bottom: 1rem;
+		margin-top: 3.5rem;
+		margin-bottom: 1.5rem;
 	}
 </style>

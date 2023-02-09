@@ -12,14 +12,14 @@
 </script>
 
 <li>
-	<Typography.Condensed tag="div">
-		<Date {...date} />
-	</Typography.Condensed>
 	<Typography.H3>
 		<MaybeLink href={link}>
 			{name}
 		</MaybeLink>
 	</Typography.H3>
+	<Typography.Condensed tag="div">
+		<Date {...date} />
+	</Typography.Condensed>
 	{#if title}
 		<Typography.Condensed tag="p">{title}</Typography.Condensed>
 	{/if}
