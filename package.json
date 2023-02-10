@@ -29,6 +29,7 @@
 		"prettier": "^2.8.0",
 		"prettier-plugin-svelte": "^2.8.1",
 		"sass": "^1.57.0",
+		"spotify-web-api-node": "^5.0.2",
 		"svelte": "^3.54.0",
 		"svelte-check": "^2.9.2",
 		"svelte-preprocess-import-assets": "^0.2.5",
@@ -41,7 +42,6 @@
 	"type": "module",
 	"dependencies": {
 		"luxon": "^3.2.1",
-		"simplex-noise": "^4.0.1",
-		"spotify-web-api-node": "^5.0.2"
+		"simplex-noise": "^4.0.1"
 	}
 }
