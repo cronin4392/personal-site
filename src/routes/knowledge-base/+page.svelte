@@ -20,7 +20,7 @@
 	<svelte:fragment slot="content">
 		<div class="container">
 			<nav>
-				<Typography.Condensed tag="div" class="blur-bg">
+				<Typography.Condensed tag="div">
 					{#each data.tags as { tag, count }}
 						<div>{tag}: {count}</div>
 					{/each}
@@ -28,21 +28,33 @@
 			</nav>
 			<div>
 				<section>
-					<Typography.H2 class="blur-bg">Youtube Channels</Typography.H2>
-					<ul class="list">
-						{#each data.youtube as { name, link, tags }}
-							<li class="blur-bg">
-								<Typography.H3 tag="div"><Link href={link}>{name}</Link></Typography.H3>
-								<TagList {tags} />
+					<Typography.H2>Youtube Channels</Typography.H2>
+					<ul class="youtubes">
+						{#each data.youtube as { name, link, tags, video_id, video_title }}
+							<li class="youtube">
+								<div>
+									<iframe
+										src="https://www.youtube-nocookie.com/embed/{video_id}"
+										title="YouTube video player"
+										frameborder="0"
+										allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+										allowfullscreen
+									/>
+								</div>
+								<div>
+									<Typography.H3 tag="div"><Link href={link}>{name}</Link></Typography.H3>
+									<p>{video_title}</p>
+									<TagList {tags} />
+								</div>
 							</li>
 						{/each}
 					</ul>
 				</section>
 				<section>
-					<Typography.H2 class="blur-bg">Books</Typography.H2>
+					<Typography.H2>Books</Typography.H2>
 					<ul class="list">
 						{#each data.books as { name, link, tags }}
-							<li class="blur-bg">
+							<li>
 								<Typography.H3 tag="div"><Link href={link}>{name}</Link></Typography.H3>
 								<TagList {tags} />
 							</li>
@@ -50,7 +62,7 @@
 					</ul>
 				</section>
 				<section class="list">
-					<Typography.H2 class="blur-bg">Playlists</Typography.H2>
+					<Typography.H2>Playlists</Typography.H2>
 					{#each data.playlists as playlist}
 						<Link href={playlist.uri}>
 							<Typography.H3>{playlist.name}</Typography.H3>
@@ -74,7 +86,6 @@
 
 	.container {
 		display: grid;
-		font-size: 2rem;
 		align-items: flex-start;
 		// gap: 3rem;
 
@@ -95,6 +106,23 @@
 
 		@media screen and (min-width: 720px) {
 			grid-template-columns: repeat(3, 1fr);
+		}
+	}
+
+	.youtubes {
+		display: grid;
+		gap: 2rem;
+	}
+
+	.youtube {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1rem;
+
+		iframe {
+			width: 100%;
+			aspect-ratio: 1.77777778;
+			vertical-align: top;
 		}
 	}
 </style>

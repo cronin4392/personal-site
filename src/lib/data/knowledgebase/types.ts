@@ -3,6 +3,8 @@ export type YoutubeEntry = {
 	name: string;
 	link: string;
 	tags: Array<string>;
+	video_id: string;
+	video_title: string;
 };
 
 export type BookEntry = {

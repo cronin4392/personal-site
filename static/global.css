@@ -90,9 +90,11 @@ html {
 }
 
 body {
-	font-family: 'Cloister', serif;
-	font-size: 2rem;
+	font-family: var(--font-sans);
+	font-size: 1.4rem;
 	line-height: 1.4;
+	font-weight: 300;
+	font-stretch: expanded;
 	color: var(--text-color);
 	background-color: var(--color-yellow);
 	padding-left: var(--site-padding);
