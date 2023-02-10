@@ -10,7 +10,9 @@
 	* {
 		font-family: 'Franklin Gothic', sans-serif;
 		font-size: 1rem;
-		text-transform: uppercase;
 		letter-spacing: 0.01em;
+		font-weight: 300;
+		font-stretch: expanded;
+		margin: 0;
 	}
 </style>

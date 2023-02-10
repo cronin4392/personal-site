@@ -11,19 +11,31 @@
 	export let description: string;
 </script>
 
-<li>
-	<Typography.H3>
-		<MaybeLink href={link}>
-			{name}
-		</MaybeLink>
-	</Typography.H3>
-	<Typography.Condensed tag="div">
-		<Date {...date} />
-	</Typography.Condensed>
-	{#if title}
-		<Typography.Condensed tag="p">{title}</Typography.Condensed>
-	{/if}
-	<Typography.Condensed tag="div">
-		<Paragraphs text={description} />
-	</Typography.Condensed>
+<li class="job-item">
+	<div>
+		<Typography.H3>
+			<MaybeLink href={link}>
+				{name}
+			</MaybeLink>
+		</Typography.H3>
+		<Typography.Condensed tag="div">
+			<Date {...date} />
+		</Typography.Condensed>
+		{#if title}
+			<Typography.Condensed tag="p">{title}</Typography.Condensed>
+		{/if}
+	</div>
+	<div>
+		<Typography.Condensed tag="div">
+			<Paragraphs text={description} />
+		</Typography.Condensed>
+	</div>
 </li>
+
+<style>
+	.job-item {
+		display: grid;
+		grid-template-columns: 1fr 2fr;
+		column-gap: 1rem;
+	}
+</style>

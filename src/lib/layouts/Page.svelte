@@ -38,6 +38,7 @@
 		flex-direction: column;
 		justify-content: flex-end;
 		padding-top: 40vh;
+		margin-bottom: 3rem;
 	}
 	.image-wrapper {
 		position: fixed;

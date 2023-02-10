@@ -6,13 +6,16 @@
 
 <svelte:element this={tag} class={className}><slot /></svelte:element>
 
-<style>
+<style lang="scss">
 	* {
-		font-size: 2.2rem;
-		font-family: var(--font-sans);
-		font-stretch: expanded;
-		font-weight: 300;
+		font-size: 4rem;
+		line-height: 1;
+		font-family: 'Cloister Swash';
 		margin-top: 3.5rem;
-		margin-bottom: 1.5rem;
+		margin-bottom: 2.2rem;
+
+		&:first-child {
+			margin-top: 0;
+		}
 	}
 </style>

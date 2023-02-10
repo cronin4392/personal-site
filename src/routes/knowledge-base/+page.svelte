@@ -64,15 +64,11 @@
 </Layout>
 
 <style lang="scss">
-	header {
-		margin-bottom: 4rem;
-	}
-
 	nav {
 		display: none;
 
 		@media screen and (min-width: 720px) {
-			display: block;
+			// display: block;
 		}
 	}
 
@@ -80,10 +76,11 @@
 		display: grid;
 		font-size: 2rem;
 		align-items: flex-start;
+		// gap: 3rem;
 
 		@media screen and (min-width: 720px) {
-			grid-template-columns: 9rem 1fr;
-			gap: calc(var(--site-padding) / 2);
+			// grid-template-columns: 9rem 1fr;
+			// gap: calc(var(--site-padding) / 2);
 		}
 	}
 
@@ -94,8 +91,7 @@
 	.list {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
-		column-gap: 1rem;
-		row-gap: 1.5rem;
+		gap: 2rem;
 
 		@media screen and (min-width: 720px) {
 			grid-template-columns: repeat(3, 1fr);

@@ -69,17 +69,10 @@
 
 	.list {
 		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-		column-gap: 1rem;
-		row-gap: 1.5rem;
-		font-size: 1.5rem;
+		row-gap: 2rem;
 
 		@media screen and (min-width: 720px) {
-			grid-template-columns: repeat(3, 1fr);
-		}
-
-		:global(p) {
-			margin: 0;
+			// grid-template-columns: repeat(3, 1fr);
 		}
 	}
 </style>
