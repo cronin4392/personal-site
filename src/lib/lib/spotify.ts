@@ -21,6 +21,9 @@ console.log('SPOTIFY API TOKEN', SPOTIFY_ACCESS_TOKEN);
 spotify.setAccessToken(SPOTIFY_ACCESS_TOKEN);
 
 export const getPlaylists = async () => {
-	const data = await spotify.getUserPlaylists('1217619176');
+	const data = await spotify.getUserPlaylists('1217619176').catch((err) => {
+		console.error('SPOTIFY ERROR', err.body.error.message);
+		return { body: { items: [] } };
+	});
 	return data.body.items;
 };
