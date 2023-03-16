@@ -19,12 +19,8 @@
 	</svelte:fragment>
 	<svelte:fragment slot="content">
 		<div class="container">
-			<nav>
-				<Typography.Condensed tag="div">
-					{#each data.tags as { tag, count }}
-						<div>{tag}: {count}</div>
-					{/each}
-				</Typography.Condensed>
+			<nav class="tags">
+				<TagList tags={data.tags.map(({ tag }) => tag)} />
 			</nav>
 			<div>
 				<section>
@@ -76,23 +72,15 @@
 </Layout>
 
 <style lang="scss">
-	nav {
-		display: none;
-
-		@media screen and (min-width: 720px) {
-			// display: block;
-		}
+	.tags {
+		display: flex;
+		gap: 1rem;
+		margin-bottom: 3rem;
 	}
 
 	.container {
 		display: grid;
 		align-items: flex-start;
-		// gap: 3rem;
-
-		@media screen and (min-width: 720px) {
-			// grid-template-columns: 9rem 1fr;
-			// gap: calc(var(--site-padding) / 2);
-		}
 	}
 
 	section + section {
@@ -111,7 +99,11 @@
 
 	.youtubes {
 		display: grid;
-		gap: 2rem;
+		gap: 1rem;
+		@media screen and (min-width: 720px) {
+			gap: 2rem;
+			grid-template-columns: repeat(2, 1fr);
+		}
 	}
 
 	.youtube {
