@@ -3,6 +3,14 @@ import type { YoutubeEntry } from './types';
 const youtube: Array<YoutubeEntry> = [
 	{
 		type: 'youtube',
+		name: 'DW Documentary',
+		link: 'https://www.youtube.com//channel/UCW39zufHfsuGgpLviKh297Q',
+		tags: ['world', 'nature', 'politics', 'history', 'economics'],
+		video_id: 'yKNmqI7H3cA',
+		video_title: 'The last mountain gorillas need more space',
+	},
+	{
+		type: 'youtube',
 		name: '3Blue1Brown',
 		link: 'https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw',
 		tags: ['math', 'data-vis', 'educational'],
@@ -28,26 +36,26 @@ const youtube: Array<YoutubeEntry> = [
 	{
 		type: 'youtube',
 		name: 'Brick Experiment Channel',
-		link: 'https://www.youtube.com/channel/UClsFdM0HzTdF1JYoraQ0aUw',
+		link: 'https://www.youtube.com/@BrickExperimentChannel',
 		tags: ['fun', 'technology', 'science', 'engineering', 'educational'],
-		video_id: 'r6sGWTCMz2k',
-		video_title: 'But what is a Fourier series? From heat flow to drawing with circles',
+		video_id: 'MwHHErfX9hI',
+		video_title: 'Making Lego Car CLIMB Obstacles',
 	},
 	{
 		type: 'youtube',
 		name: 'Brick Technology',
-		link: 'https://www.youtube.com/channel/UCUuvZ0skL2WYZ3rhPMZbfdA',
+		link: 'https://www.youtube.com/@BrickTechnology',
 		tags: ['fun', 'technology', 'science', 'engineering', 'educational'],
-		video_id: 'r6sGWTCMz2k',
-		video_title: 'But what is a Fourier series? From heat flow to drawing with circles',
+		video_id: 'eZlqNb-eqe8',
+		video_title: 'Lego Car Suspension Testing Device',
 	},
 	{
 		type: 'youtube',
 		name: 'Captain Disillusion',
 		link: 'https://www.youtube.com/user/CaptainDisillusion',
 		tags: ['vfx', 'debunk', 'educational'],
-		video_id: 'r6sGWTCMz2k',
-		video_title: 'But what is a Fourier series? From heat flow to drawing with circles',
+		video_id: 'ou7KSmfC3lA',
+		video_title: "Captain D's Definitive Guide to TRICK SHOTS",
 	},
 	{
 		type: 'youtube',
@@ -110,8 +118,8 @@ const youtube: Array<YoutubeEntry> = [
 		name: 'Corridor Crew',
 		link: 'https://www.youtube.com/user/samandniko',
 		tags: ['vfx', 'learning', 'technology'],
-		video_id: 'r6sGWTCMz2k',
-		video_title: 'But what is a Fourier series? From heat flow to drawing with circles',
+		video_id: 'KH1V6CHO1Jk',
+		video_title: 'We Fixed The Worst VFX Shot Ever',
 	},
 
 	/**
@@ -155,13 +163,6 @@ const youtube: Array<YoutubeEntry> = [
 	// 	link: 'https://www.youtube.com//user/GizzlyB3aver',
 	// 	tags: [],
 	// },
-	// {
-	// 	type: 'youtube',
-	// 	name: 'Captain Disillusion',
-	// 	link: 'https://www.youtube.com//user/CaptainDisillusion',
-	// 	tags: [],
-	// },
-	// {
 	// 	type: 'youtube',
 	// 	name: 'CaspianReport',
 	// 	link: 'https://www.youtube.com//user/CaspianReport',
@@ -312,11 +313,6 @@ const youtube: Array<YoutubeEntry> = [
 	// 	tags: [],
 	// },
 	// {
-	// 	type: 'youtube',
-	// 	name: 'DW Documentary',
-	// 	link: 'https://www.youtube.com//channel/UCW39zufHfsuGgpLviKh297Q',
-	// 	tags: [],
-	// },
 	// {
 	// 	type: 'youtube',
 	// 	name: 'EdibleAcres',
