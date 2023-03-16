@@ -4,6 +4,7 @@
 	import Typography from '$lib/components/Typography';
 	import Link from '$lib/components/Link.svelte';
 	import TagList from '$lib/components/TagList.svelte';
+	import SpotifyPlaylist from '$lib/components/SpotifyPlaylist.svelte';
 
 	export let data: PageData;
 </script>
@@ -57,14 +58,16 @@
 						{/each}
 					</ul>
 				</section>
-				<section class="list">
+				<section>
 					<Typography.H2>Playlists</Typography.H2>
-					{#each data.playlists as playlist}
-						<Link href={playlist.uri}>
-							<Typography.H3>{playlist.name}</Typography.H3>
-							<p>{playlist.tracks.total} tracks</p>
-						</Link>
-					{/each}
+					<ul class="list">
+						{#each data.spotify as { name, id }}
+							<li>
+								<Typography.H3>{name}</Typography.H3>
+								<SpotifyPlaylist {id} />
+							</li>
+						{/each}
+					</ul>
 				</section>
 			</div>
 		</div>
@@ -101,20 +104,19 @@
 		display: grid;
 		gap: 1rem;
 		@media screen and (min-width: 720px) {
-			gap: 2rem;
-			grid-template-columns: repeat(2, 1fr);
+			grid-template-columns: repeat(3, 1fr);
 		}
 	}
 
 	.youtube {
 		display: grid;
-		grid-template-columns: repeat(2, 1fr);
 		gap: 1rem;
 
 		iframe {
 			width: 100%;
 			aspect-ratio: 1.77777778;
 			vertical-align: top;
+			border-radius: 12px;
 		}
 	}
 </style>

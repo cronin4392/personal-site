@@ -15,4 +15,10 @@ export type BookEntry = {
 	tags: Array<string>;
 };
 
-export type KnowledgebaseEntry = YoutubeEntry | BookEntry;
+export type SpotifyEntry = {
+	type: 'spotify';
+	name: string;
+	id: string;
+};
+
+export type KnowledgebaseEntry = YoutubeEntry | BookEntry | SpotifyEntry;
