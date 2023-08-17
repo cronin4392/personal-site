@@ -1,11 +1,12 @@
 <script lang="ts">
+	import '../app.css';
 	import BackgroundImages from '$lib/components/BackgroundImages/Index.svelte';
 	import Nav from '$lib/components/Nav.svelte';
 </script>
 
 <Nav />
 
-<main class="show-visited">
+<main class="show-visited pt-16">
 	<slot />
 </main>
 
@@ -13,7 +14,6 @@
 
 <style>
 	main {
-		padding-top: 64px;
 		padding-bottom: var(--site-padding);
 	}
 </style>
