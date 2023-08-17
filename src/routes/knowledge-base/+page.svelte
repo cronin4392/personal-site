@@ -28,8 +28,14 @@
 				<section>
 					<Typography.H2>Youtube Channels</Typography.H2>
 					<div class="grid grid-cols-3 gap-x-4 gap-y-20">
-						{#each data.youtube as { name, link, tags, video_id, video_title }}
-							<Card title={name} description={video_title} {tags} {link} {video_id} />
+						{#each data.youtube as { name, description, link, tags, video_id, video_title }}
+							<Card
+								title={name}
+								description={description || video_title}
+								{tags}
+								{link}
+								{video_id}
+							/>
 						{/each}
 					</div>
 				</section>

@@ -11,7 +11,7 @@
 </script>
 
 <div>
-	{#if video_id}
+	<!-- {#if video_id}
 		<div class="mb-5">
 			<iframe
 				class="aspect-video w-full rounded-2xl align-top"
@@ -22,11 +22,11 @@
 				allowfullscreen
 			/>
 		</div>
-	{/if}
+	{/if} -->
 	<div>
 		<Typography.H3 tag="div"><Link href={link}>{title}</Link></Typography.H3>
 		{#if description}
-			<p class="mt-2 text-xl">{description}</p>
+			<p class="mt-2 text-lg">{description}</p>
 		{/if}
 		<div class="mt-3">
 			<TagList {tags} />

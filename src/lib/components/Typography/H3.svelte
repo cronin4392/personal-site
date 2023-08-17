@@ -4,7 +4,7 @@
 	export { className as class };
 </script>
 
-<svelte:element this={tag} class={`${className} text-2xl`}><slot /></svelte:element>
+<svelte:element this={tag} class={`${className} text-3xl`}><slot /></svelte:element>
 
 <style>
 	* {

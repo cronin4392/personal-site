@@ -1,10 +1,11 @@
 export type YoutubeEntry = {
 	type: 'youtube';
 	name: string;
+	description?: string;
 	link: string;
 	tags: Array<string>;
-	video_id: string;
-	video_title: string;
+	video_id?: string;
+	video_title?: string;
 };
 
 export type BookEntry = {
