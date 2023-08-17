@@ -12,7 +12,7 @@
 	const images = [Image1, Image2, Image3, Image4, Image5];
 </script>
 
-<header>
+<header class="mb-12 flex flex-col justify-end pt-[40vh]">
 	<div class="image-wrapper">
 		<div class="image">
 			<img src={images[image % images.length]} alt="Flower" />
@@ -22,24 +22,15 @@
 		<slot name="title" />
 	</Typography.H1>
 	{#if $$slots.intro}
-		<span class="blur-bg">
-			<slot name="intro" />
-		</span>
+		<slot name="intro" />
 	{/if}
 </header>
 
-<article class="blur-bg">
+<article class="bg-yellow">
 	<slot name="content" />
 </article>
 
 <style lang="scss">
-	header {
-		display: flex;
-		flex-direction: column;
-		justify-content: flex-end;
-		padding-top: 40vh;
-		margin-bottom: 3rem;
-	}
 	.image-wrapper {
 		position: fixed;
 		inset: 0;

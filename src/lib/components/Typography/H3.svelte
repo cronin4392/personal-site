@@ -1,14 +1,13 @@
 <script lang="ts">
 	export let tag: string = 'h2';
-	let className: string | null = null;
+	let className: string = '';
 	export { className as class };
 </script>
 
-<svelte:element this={tag} class={className}><slot /></svelte:element>
+<svelte:element this={tag} class={`${className} text-2xl`}><slot /></svelte:element>
 
 <style>
 	* {
-		font-size: 2.2rem;
 		font-family: var(--font-serif);
 	}
 </style>

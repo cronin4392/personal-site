@@ -31,7 +31,7 @@
 </script>
 
 <Layout image={1}>
-	<svelte:fragment slot="title">Hi, <br />I’m Stephen Cronin</svelte:fragment>
+	<svelte:fragment slot="title">Hi, I’m <br />Stephen Cronin</svelte:fragment>
 	<svelte:fragment slot="intro">
 		<p>
 			I am a software developer with an eye for design. Throughout my career I have worked across a
