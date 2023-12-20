@@ -1,6 +1,7 @@
 <script lang="ts">
-	import jobs from '$lib/data/experience/jobs';
 	import DateShort from '$lib/components/DateShort.svelte';
+	import jobs from '$lib/data/experience/jobs';
+	import { projectsArr as projects } from '$lib/data/projects';
 </script>
 
 <header>
@@ -22,10 +23,27 @@
 	</div>
 </section>
 
+<section>
+	<h2>Completed<br />Projects</h2>
+	<div>
+		<ol>
+			{#each projects as { name, date, company, url }, i}
+				<li class="project container">
+					<h3>{name}</h3>
+					<div class="date">{date}</div>
+					<a href={url} target="_BLANK">View</a>
+				</li>
+			{/each}
+		</ol>
+	</div>
+</section>
+
 <style lang="scss">
 	header,
 	section {
+		box-sizing: border-box;
 		min-height: calc(100vh - 14.4vw);
+		padding-bottom: 20vh;
 	}
 	.container {
 		padding-left: 80px;
@@ -48,6 +66,10 @@
 		font-weight: 400;
 	}
 
+	a {
+		color: inherit;
+	}
+
 	ol,
 	ul {
 		list-style: none;
@@ -66,7 +88,12 @@
 
 	.job {
 		display: grid;
-		grid-template-columns: 2fr 2fr 1fr;
+		grid-template-columns: 5fr 5fr 2fr;
+	}
+
+	.project {
+		display: grid;
+		grid-template-columns: 5fr 5fr 2fr;
 	}
 
 	.date {
