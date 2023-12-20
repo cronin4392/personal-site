@@ -36,6 +36,24 @@ export const projectsDict: { [key: string]: Project } = {
 		company: 'Artists For Humanity',
 		url: 'https://afhboston.org',
 	},
+	pluspool: {
+		name: '+ POOL',
+		date: 'Aug 2019',
+		company: '+ POOL',
+		url: 'https://water.pluspool.org/',
+	},
+	typeby: {
+		name: 'TypeBy',
+		date: 'June 2019',
+		company: 'TypeBy',
+		url: 'https://www.typeby.com/',
+	},
+	generaltype: {
+		name: 'General Type Studio',
+		date: 'June 2018',
+		company: 'General Type Studio',
+		url: 'https://www.generaltypestudio.com/',
+	},
 	outline: {
 		name: 'The Outline',
 		date: 'Sep 2017',
@@ -44,7 +62,7 @@ export const projectsDict: { [key: string]: Project } = {
 	},
 	hyperhyper: {
 		name: 'HyperHyper',
-		date: '2014',
+		date: 'May 2014',
 		company: 'HyperHyper',
 		url: 'http://hyperhyper.com/',
 	},
