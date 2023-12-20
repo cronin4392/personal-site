@@ -2,6 +2,22 @@ import { DateTime } from 'luxon';
 
 export default [
 	{
+		name: 'Tulip Inc.',
+		title: 'Level 4 Software Engineer',
+		date: {
+			start: DateTime.utc(2022, 12, 1).toString(),
+			end: 'Now',
+		},
+	},
+	{
+		name: 'VISUALSSS',
+		title: 'VJ and Projection Artist',
+		date: {
+			start: DateTime.utc(2019, 2, 1).toString(),
+			end: 'Now',
+		},
+	},
+	{
 		name: 'Artists For Humanity',
 		title: 'Director of Creative Technology',
 		description: `10 years after working at Artists For Humanity as a teenager I came back and founded the Creative Technology Studio. The studio's goal was to service our clients technology needs. We primarily focused on web solutions and interactive art installations.
@@ -127,7 +143,7 @@ The studio's adult staff consisted of myself, another full time developer, and 3
 	},
 	{
 		name: 'Code & Theory',
-		title: 'Junior&ensp;>&ensp;Senior Front-end Developer',
+		title: 'Junior > Senior Front-end Developer',
 		description:
 			"I worked as a front-end developer at the web agency Code and Theory, progressing from junior level to senior level in 3 years. I created websites for a variety of clients including Dr. Pepper Snapple Group, L'Oréal, and Brown–Forman.",
 		date: {

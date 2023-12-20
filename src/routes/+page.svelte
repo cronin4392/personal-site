@@ -1,60 +1,6 @@
 <script lang="ts">
-	type Job = {
-		company: string;
-		title: string;
-		start: string;
-		end: string;
-	};
-	const jobs = [
-		{
-			company: 'Tulip Inc.',
-			title: 'Level 4 Software Engineer',
-			start: '12/2022',
-			end: 'NOW',
-		},
-		{
-			company: 'VISUALSSS',
-			title: 'VJ and Projection Artist',
-			start: '02/2019',
-			end: 'NOW',
-		},
-		{
-			company: 'Artists For Humanity',
-			title: 'Director of Creative Technology',
-			start: '09/2020',
-			end: '06/2022',
-		},
-		{
-			company: 'Reaktor Inc.',
-			title: 'Senior Developer',
-			start: '07/2018',
-			end: '09/2020',
-		},
-		{
-			company: 'The Outline',
-			title: 'Lead Front-end Developer',
-			start: '09/2016',
-			end: '08/2018',
-		},
-		{
-			company: 'The Intercept',
-			title: 'Senior Web Developer',
-			start: '06/2016',
-			end: '09/2016',
-		},
-		{
-			company: 'HYPERHYPER / PHHHOTO',
-			title: 'Senior Web Developer',
-			start: '01/2015',
-			end: '05/2016',
-		},
-		{
-			company: 'Code & Theory',
-			title: 'Junior > Senior Front-end Developer',
-			start: '09/2011',
-			end: '08/2014',
-		},
-	];
+	import jobs from '$lib/data/experience/jobs';
+	import DateShort from '$lib/components/DateShort.svelte';
 </script>
 
 <header>
@@ -65,11 +11,11 @@
 	<h2>Work<br />Experience</h2>
 	<div>
 		<ol>
-			{#each jobs as { company, title, start, end }, i}
+			{#each jobs as { name, title, date }, i}
 				<li class="job container">
-					<h3>{company}</h3>
+					<h3>{name}</h3>
 					<p>{title}</p>
-					<div>{start} - {end}</div>
+					<div class="date"><DateShort {...date} /></div>
 				</li>
 			{/each}
 		</ol>
@@ -121,5 +67,9 @@
 	.job {
 		display: grid;
 		grid-template-columns: 2fr 2fr 1fr;
+	}
+
+	.date {
+		white-space: pre;
 	}
 </style>
