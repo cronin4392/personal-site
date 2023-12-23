@@ -1,16 +1,21 @@
 <script lang="ts">
 	import DateShort from '$lib/components/DateShort.svelte';
+	import ScrollColor from '$lib/components/ScrollColor.svelte';
 	import jobs from '$lib/data/experience/jobs';
 	import { projectsArr as projects } from '$lib/data/projects';
 </script>
 
 <header>
-	<h1>Stephen Cronin</h1>
+	<ScrollColor>
+		<h1>Stephen Cronin</h1>
+	</ScrollColor>
 </header>
 
 <section>
-	<h2>Work<br />Experience</h2>
-	<div>
+	<ScrollColor>
+		<h2>Work<br />Experience</h2>
+	</ScrollColor>
+	<div class="content">
 		<ol>
 			{#each jobs as { name, title, date }, i}
 				<li class="job container">
@@ -24,8 +29,10 @@
 </section>
 
 <section>
-	<h2>Completed<br />Projects</h2>
-	<div>
+	<ScrollColor>
+		<h2>Completed<br />Projects</h2>
+	</ScrollColor>
+	<div class="content">
 		<ol>
 			{#each projects as { name, date, company, url }, i}
 				<li class="project container">
@@ -41,7 +48,7 @@
 <style lang="scss">
 	:global(html) {
 		font-family: 'Mier', 'serif';
-		background-color: #4f0fd6;
+		background-color: #ff3d22;
 		color: #ffffff;
 		font-size: 20px;
 		font-stretch: expanded;
@@ -59,9 +66,13 @@
 	header,
 	section {
 		box-sizing: border-box;
-		min-height: calc(100vh - 14.4vw);
+		min-height: calc(100vh - 17.3vw);
+	}
+
+	.content {
 		padding-bottom: 20vh;
 	}
+
 	.container {
 		padding-left: 20px;
 		padding-right: 20px;
@@ -81,11 +92,6 @@
 		font-size: 14.4vw;
 		line-height: 0.8;
 		text-transform: uppercase;
-		color: #000000;
-		position: sticky;
-		z-index: -1;
-		top: 0;
-		font-stretch: normal;
 	}
 
 	h3 {
