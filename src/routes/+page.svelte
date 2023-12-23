@@ -31,7 +31,7 @@
 				<li class="project container">
 					<h3 class="name">{name}</h3>
 					<div class="date">{date}</div>
-					<a class="link" href={url} target="_BLANK">View</a>
+					<a class="link" href={url} target="_BLANK">Visit →</a>
 				</li>
 			{/each}
 		</ol>
@@ -40,7 +40,7 @@
 
 <style lang="scss">
 	:global(html) {
-		font-family: 'Franklin Gothic', 'serif';
+		font-family: 'Mier', 'serif';
 		background-color: #4f0fd6;
 		color: #ffffff;
 		font-size: 20px;
@@ -95,6 +95,7 @@
 
 	a {
 		color: inherit;
+		text-decoration: none;
 	}
 
 	ol {

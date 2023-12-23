@@ -24,4 +24,4 @@
 	const endDate = parseEndDate(end);
 </script>
 
-{startDate}{#if endDate}&nbsp;-&#32;{endDate}{/if}
+{#if endDate}{endDate}&#32;-&nbsp;{startDate}{/if}
