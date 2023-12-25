@@ -5,9 +5,14 @@
 	import { projectsArr as projects } from '$lib/data/projects';
 </script>
 
-<header>
+<header class="header">
+	<div class="fill">
+		<ScrollColor>
+			<h1>Stephen Cronin</h1>
+		</ScrollColor>
+	</div>
 	<ScrollColor>
-		<h1>Stephen Cronin</h1>
+		<div class="down-arrow">↓</div>
 	</ScrollColor>
 </header>
 
@@ -17,7 +22,7 @@
 	</ScrollColor>
 	<div class="content">
 		<ol>
-			{#each jobs as { name, title, date }, i}
+			{#each jobs as { name, title, date }}
 				<li class="job container">
 					<h3 class="name">{name}</h3>
 					<p class="title">{title}</p>
@@ -66,7 +71,18 @@
 	header,
 	section {
 		box-sizing: border-box;
-		min-height: calc(100vh - 17.3vw);
+		min-height: 100vh;
+	}
+
+	.fill {
+		flex-grow: 1;
+	}
+
+	.header {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		padding-bottom: 0.4rem;
 	}
 
 	.content {
@@ -87,9 +103,15 @@
 			padding-right: 80px;
 		}
 	}
+
+	.down-arrow,
 	h1,
 	h2 {
-		font-size: 14.4vw;
+		@media screen and (min-width: 1200px) {
+			font-size: 14.4vw;
+		}
+
+		font-size: 11.55vw;
 		line-height: 0.8;
 		text-transform: uppercase;
 	}
