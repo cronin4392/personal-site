@@ -20,7 +20,10 @@
 			<p>Links:</p>
 			<ul>
 				<li><a href="https://github.com/cronin4392" target="_blank">Github</a></li>
-				<li><a href="https://linkedin.com/cronin4392" target="_blank">LinkedIn</a></li>
+				<li>
+					<a href="https://www.linkedin.com/in/stephen-cronin-28b86044/" target="_blank">LinkedIn</a
+					>
+				</li>
 				<li><a href="https://visualsss.net" target="_blank">Video Art</a></li>
 			</ul>
 		</div>
