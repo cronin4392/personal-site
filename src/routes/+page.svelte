@@ -12,19 +12,20 @@
 		</ScrollColor>
 	</div>
 	<div class="container">
-		<p>
+		<p class="intro">
 			Software developer based in Somerville,&nbsp;MA specializing in frontend web development. I am
-			also an amateur video artist and dabble in calligraphy.
+			also an amateur video artist and practice calligraphy.
 		</p>
-		<ul class="links">
-			<li><a href="https://github.com/cronin4392" target="_blank">Github</a></li>
-			<li><a href="https://linkedin.com/cronin4392" target="_blank">LinkedIn</a></li>
-		</ul>
-		<div class="down-arrow">↓</div>
+		<div class="links">
+			<p>Links:</p>
+			<ul>
+				<li><a href="https://github.com/cronin4392" target="_blank">Github</a></li>
+				<li><a href="https://linkedin.com/cronin4392" target="_blank">LinkedIn</a></li>
+				<li><a href="https://visualsss.net" target="_blank">Video Art</a></li>
+			</ul>
+		</div>
+		<div class="down-arrow"><span>↓</span></div>
 	</div>
-	<!-- <ScrollColor>
-		<div class="down-arrow">↓</div>
-	</ScrollColor> -->
 </header>
 
 <section>
@@ -93,11 +94,16 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
-		padding-bottom: 1.4rem;
-		font-size: 1.4rem;
-	}
+		font-size: 1.2rem;
+		padding-bottom: 1em;
 
-	.links {
+		@media screen and (min-width: 720px) {
+			font-size: 1.3rem;
+		}
+
+		@media screen and (min-width: 1200px) {
+			font-size: 1.4rem;
+		}
 	}
 
 	.content {
@@ -121,14 +127,36 @@
 
 	.header .container {
 		display: grid;
-		grid-template-columns: 3fr 1fr 1fr;
-		gap: 2rem;
+		grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+		gap: 1rem;
+
+		@media screen and (min-width: 1200px) {
+			grid-template-columns: minmax(0, 3fr) minmax(0, 1fr) minmax(0, 1fr);
+			gap: 2rem;
+		}
+	}
+
+	.intro {
+		grid-column: span 2;
+
+		@media screen and (min-width: 1200px) {
+			grid-column: auto;
+		}
 	}
 
 	.down-arrow {
 		display: flex;
 		justify-content: flex-end;
+		align-items: flex-end;
 		font-size: 3em;
+
+		span {
+			margin: -0.2em -0.1em;
+		}
+
+		@media screen and (min-width: 720px) {
+			// grid-column: 2;
+		}
 	}
 
 	h1,
