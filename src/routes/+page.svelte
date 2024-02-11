@@ -13,8 +13,8 @@
 	</div>
 	<div class="container">
 		<p class="intro">
-			Software developer based in Somerville,&nbsp;MA specializing in frontend web development. I am
-			also an amateur video artist and practice calligraphy.
+			I am a software developer based in Somerville,&nbsp;MA specializing in frontend web
+			development. I am also an amateur video artist and practice calligraphy.
 		</p>
 		<div class="links">
 			<p>Links:</p>
