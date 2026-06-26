@@ -15,7 +15,6 @@
 	},
 	"devDependencies": {
 		"@playwright/test": "^1.37.0",
-		"@sveltejs/adapter-auto": "^3.3.1",
 		"@sveltejs/kit": "^2.68.0",
 		"@types/luxon": "^3.2.0",
 		"@types/spotify-web-api-node": "^5.0.7",
@@ -45,6 +44,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@sveltejs/adapter-vercel": "^6.3.4",
 		"@sveltejs/vite-plugin-svelte": "^3.1.2",
 		"luxon": "^3.4.0",
 		"simplex-noise": "^4.0.1",
