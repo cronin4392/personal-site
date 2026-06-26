@@ -46,6 +46,10 @@
 	"type": "module",
 	"dependencies": {
 		"luxon": "^3.4.0",
-		"simplex-noise": "^4.0.1"
+		"simplex-noise": "^4.0.1",
+		"vercel": "^54.17.3"
+	},
+	"engines": {
+		"node": "22.x"
 	}
 }
