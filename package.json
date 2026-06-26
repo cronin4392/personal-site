@@ -15,8 +15,8 @@
 	},
 	"devDependencies": {
 		"@playwright/test": "^1.37.0",
-		"@sveltejs/adapter-auto": "^2.1.0",
-		"@sveltejs/kit": "^1.22.6",
+		"@sveltejs/adapter-auto": "^3.3.1",
+		"@sveltejs/kit": "^2.68.0",
 		"@types/luxon": "^3.2.0",
 		"@types/spotify-web-api-node": "^5.0.7",
 		"@typescript-eslint/eslint-plugin": "^6.4.0",
@@ -39,12 +39,13 @@
 		"tailwindcss": "^3.3.3",
 		"tslib": "^2.6.1",
 		"typescript": "^5.1.6",
-		"vite": "^4.4.9",
+		"vite": "^5.4.21",
 		"vite-imagetools": "^5.0.7",
 		"vitest": "^0.34.1"
 	},
 	"type": "module",
 	"dependencies": {
+		"@sveltejs/vite-plugin-svelte": "^3.1.2",
 		"luxon": "^3.4.0",
 		"simplex-noise": "^4.0.1",
 		"vercel": "^54.17.3"

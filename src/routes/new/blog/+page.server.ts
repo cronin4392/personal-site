@@ -9,7 +9,7 @@ export const load = (async () => {
 			const { metadata } = await paths[path]();
 			const slug = path.split('/').at(-2);
 			if (!slug || !metadata) {
-				throw error(404, 'Not found!');
+				error(404, 'Not found!');
 			}
 			return { slug, ...metadata };
 		})
