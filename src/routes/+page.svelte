@@ -68,6 +68,7 @@
 <style lang="scss">
 	:global(html) {
 		font-family: 'Mier', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+		font-display: swap;
 		background-color: #ff3d22;
 		color: #ffffff;
 		font-size: 20px;
