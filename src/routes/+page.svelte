@@ -5,65 +5,67 @@
 	import { projectsArr as projects } from '$lib/data/projects';
 </script>
 
-<header class="header">
-	<div class="fill">
-		<ScrollColor>
-			<h1>Stephen Cronin</h1>
-		</ScrollColor>
-	</div>
-	<div class="container">
-		<p class="intro">
-			I am a software developer based in Somerville,&nbsp;MA specializing in frontend web
-			development. I am also an amateur video artist and practice calligraphy.
-		</p>
-		<div class="links">
-			<p>Links:</p>
-			<ul>
-				<li><a href="https://github.com/cronin4392" target="_blank">Github</a></li>
-				<li>
-					<a href="https://www.linkedin.com/in/stephen-cronin-28b86044/" target="_blank">LinkedIn</a
-					>
-				</li>
-				<li><a href="https://visualsss.net" target="_blank">Video Art</a></li>
-			</ul>
+<main>
+	<header class="header">
+		<div class="fill">
+			<ScrollColor>
+				<h1>Stephen Cronin</h1>
+			</ScrollColor>
 		</div>
-		<div class="down-arrow"><span>↓</span></div>
-	</div>
-</header>
+		<div class="container">
+			<p class="intro">
+				I am a software developer based in Somerville,&nbsp;MA specializing in frontend web
+				development. I am also an amateur video artist and practice calligraphy.
+			</p>
+			<div class="links">
+				<p>Links:</p>
+				<ul>
+					<li><a href="https://github.com/cronin4392" target="_blank">Github</a></li>
+					<li>
+						<a href="https://www.linkedin.com/in/stephen-cronin-28b86044/" target="_blank">LinkedIn</a
+						>
+					</li>
+					<li><a href="https://visualsss.net" target="_blank">Video Art</a></li>
+				</ul>
+			</div>
+			<div class="down-arrow"><span>↓</span></div>
+		</div>
+	</header>
 
-<section>
-	<ScrollColor>
-		<h2>Work<br />Experience</h2>
-	</ScrollColor>
-	<div class="content">
-		<ol class="list">
-			{#each jobs as { name, title, date }}
-				<li class="job container">
-					<h3 class="name">{name}</h3>
-					<p class="title">{title}</p>
-					<div class="date"><DateShort {...date} /></div>
-				</li>
-			{/each}
-		</ol>
-	</div>
-</section>
+	<section>
+		<ScrollColor>
+			<h2>Work<br />Experience</h2>
+		</ScrollColor>
+		<div class="content">
+			<ol class="list">
+				{#each jobs as { name, title, date }}
+					<li class="job container">
+						<h3 class="name">{name}</h3>
+						<p class="title">{title}</p>
+						<div class="date"><DateShort {...date} /></div>
+					</li>
+				{/each}
+			</ol>
+		</div>
+	</section>
 
-<section>
-	<ScrollColor>
-		<h2>Completed<br />Projects</h2>
-	</ScrollColor>
-	<div class="content">
-		<ol class="list">
-			{#each projects as { name, date, company, url }, i}
-				<li class="project container">
-					<h3 class="name">{name}</h3>
-					<div class="date">{date}</div>
-					<a class="link" href={url} target="_BLANK">Visit →</a>
-				</li>
-			{/each}
-		</ol>
-	</div>
-</section>
+	<section>
+		<ScrollColor>
+			<h2>Completed<br />Projects</h2>
+		</ScrollColor>
+		<div class="content">
+			<ol class="list">
+				{#each projects as { name, date, company, url }, i}
+					<li class="project container">
+						<h3 class="name">{name}</h3>
+						<div class="date">{date}</div>
+						<a class="link" href={url} target="_BLANK">Visit →</a>
+					</li>
+				{/each}
+			</ol>
+		</div>
+	</section>
+</main>
 
 <style lang="scss">
 	:global(html) {
